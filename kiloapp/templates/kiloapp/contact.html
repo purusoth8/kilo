@@ -1,0 +1,655 @@
+{% extends "resta/base.html" %}
+{% load static %}
+{% block content %}
+<div class="menu-box">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="heading-title text-center">
+					<h2>Special Menu</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row inner-menu-box">
+			<div class="col-3">
+				<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+					<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Picked For You</a>
+					<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Biriyani</a>
+					<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Curries</</a>
+					<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Garlic Rice</a>
+					<a class="nav-link" id="v-pills-settings-tab1" data-toggle="pill" href="#v-pills-settings1" role="tab" aria-controls="v-pills-settings1" aria-selected="false">Juice Bar</a>
+					<a class="nav-link" id="v-pills-settings-tab2" data-toggle="pill" href="#v-pills-settings2" role="tab" aria-controls="v-pills-settings1" aria-selected="false">Kilo koththu</a>
+
+				</div>
+			</div>
+			
+			<div class="col-9">
+				<div class="tab-content" id="v-pills-tabContent">
+					<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+						<div class="row">
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/1Hyderabad Authentic Biryani.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Hyderabad Authentic Biryani</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $7.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/2Hyderabad style chicken 1 potion.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Hyderabad style chicken 1 potion</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $9.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/3Garlic rice with chicken.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Garlic rice with chicken</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid lunch">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/4Kilo koththu.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Kilo koththu</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $15.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid lunch">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/5Masala mix with chicken koththu.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Masala mix with chicken koththu</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $18.79</h5>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+						
+					</div>
+					<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+						<div class="row">
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/6Vegetable Biryani (1 kg).jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Vegetable Biryani (1 kg)</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $7.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/7Seafood Biryani (1 kg).jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Seafood Biryani (1 kg)</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $9.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/8Combo packs.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Combo packs</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/9Chiken wings potion.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Chiken wings potion</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/9Chiken wings potion.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Chiken wings potion</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/10Kilobiriyani rice and curry.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Kilobiriyani rice and curry</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/11Kilo koththu.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>11Kilo koththu</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/12Masala mix with chicken koththu.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>12Masala mix with chicken koththu</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/13Watermelon juice.webp'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Watermelon juice</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/14Hyderabad style chicken 1 potion.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Hyderabad style chicken 1 potion</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/15Chicken and cheese koththu.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Chicken and cheese koththu</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/16Thindukal Thalapakatti Biryani (1 kg).jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Thindukal Thalapakatti Biryani (1 kg)</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/17Mini Chicken Submarine.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Mini Chicken Submarine</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/18vegetable Mongolian Rice.jpg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>vegetable Mongolian Rice</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/19Dessert.jpg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Dessert</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/20Chicken Mongolian Rice.jpg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Chicken Mongolian Rice</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/21prawn Biriyani.jpg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>prawn Biriyani</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 special-grid drinks">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/22Seafood Mongolian.jpg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>22Seafood Mongolian</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $10.79</h5>
+									</div>
+								</div>
+							</div>
+
+						</div>
+						
+					</div>
+					<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+						<div class="row">
+							<div class="col-lg-4 col-md-6 special-grid lunch">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/23Beef Kurma.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Beef Kurma</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $15.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid lunch">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/24Chicken Kurma.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Chicken Kurma</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $18.79</h5>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-lg-4 col-md-6 special-grid lunch">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/25Fish Masala Curry.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Fish Masala Curry</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $18.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="col-lg-4 col-md-6 special-grid lunch">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/26Prawn Masala Curry.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Prawn Masala Curry</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $18.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							
+							<div class="col-lg-4 col-md-6 special-grid lunch">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/27Brinjal Kurma.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Brinjal Kurma</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $20.79</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+						<div class="row">
+							<div class="col-lg-4 col-md-6 special-grid dinner">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/41Masala mix with chicken koththu.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Special Dinner 1</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $25.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid dinner">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/img1.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Special Dinner 2</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $22.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid dinner">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/img1.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Special Dinner 3</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $24.79</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="v-pills-settings1" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+						<div class="row">
+							<div class="col-lg-4 col-md-6 special-grid dinner">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/8Combo packs.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Special Dinner 1</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $25.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid dinner">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/img1.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Special Dinner 2</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $22.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid dinner">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/img1.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Special Dinner 3</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $24.79</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="v-pills-settings2" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+						<div class="row">
+							<div class="col-lg-4 col-md-6 special-grid dinner">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/35Mango Lassi.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Special Dinner 1</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $25.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid dinner">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/img1.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Special Dinner 2</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $22.79</h5>
+									</div>
+								</div>
+							</div>
+							
+							<div class="col-lg-4 col-md-6 special-grid dinner">
+								<div class="gallery-single fix">
+									<img src="{% static 'resta/images/img1.jpeg'%}" class="img-fluid" alt="Image">
+									<div class="why-text">
+										<h4>Special Dinner 3</h4>
+										<p>Sed id magna vitae eros sagittis euismod.</p>
+										<h5> $24.79</h5>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+				</div>
+
+
+				
+			</div>
+		</div>
+	</div>
+</div>
+
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<div class="box a" data-aos="flip-down">
+  <h2>Animated using flip-down.</h2>
+</div>
+<div class="box b" data-aos="flip-down">
+  <h2>Animated using flip-down.</h2>
+</div>
+<div class="box b" data-aos="zoom-in">
+  <h2>Animated using zoom-in.</h2>
+</div>
+<div class="box a" data-aos="flip-down">
+  <h2>Animated using flip-down.</h2>
+</div>
+<div class="box b" data-aos="flip-down">
+  <h2>Animated using flip-down.</h2>
+</div>
+<div class="item" data-aos="flip-down">1</div>
+<div class="item" data-aos="fade-down">2</div>
+<div class="item" data-aos="flip-down">3</div>
+<div class="item" data-aos="flip-down">4</div>
+
+<div class="item" data-aos="zoom-in">5</div>
+<div class="item" data-aos="zoom-out">6</div>
+
+<div class="item" data-aos="slide-up">7</div>
+
+<div class="item" data-aos="flip-up">8</div>
+<div class="item" data-aos="flip-down">9</div>
+<div class="item" data-aos="flip-right">10</div>
+<div class="item" data-aos="flip-left">11</div>
+
+<!-- End QT -->
+		<div class="menu-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<div class="smt">
+						<h1 class="ml6">
+  <span class="text-wrapper">
+    <span class="letters smt-r1">Spacial Menu</span>
+  </span>
+</h1>
+
+</div>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+					</div>
+				</div>
+			</div>
+
+
+
+				<div class="col-13">
+					<div class="tab-content" id="v-pills-tabContent">
+						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+							<div class="row">
+								<div class="col-lg-4 col-md-6 " data-aos="flip-down">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/img1.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Hyderabadi Biryani</h4>
+											<p>Sed id magna vitae eros sagittis euismod.</p>
+											<h5> $7.79</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 " data-aos="flip-up">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/img2.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Lucknowi Biryani</h4>
+											<p>Sed id magna vitae eros sagittis euismod.</p>
+											<h5> $9.79</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 " data-aos="flip-down">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/img3.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Kolkata Biryani</h4>
+											<p>Sed id magna vitae eros sagittis euismod.</p>
+											<h5> $10.79</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 " data-aos="flip-up">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/img4.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Celebration Menu</h4>
+											<p>Sed id magna vitae eros sagittis euismod.</p>
+											<h5> $15.79</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 " data-aos="flip-down">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/img5.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Curries</h4>
+											<p>Sed id magna vitae eros sagittis euismod.</p>
+											<h5> $18.79</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6" data-aos="flip-up">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/img6.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Kebabs</h4>
+											<p>Sed id magna vitae eros sagittis euismod.</p>
+											<h5> $20.79</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6" data-aos="flip-down">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/img7.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Beverages and Breads</h4>
+											<p>Sed id magna vitae eros sagittis euismod.</p>
+											<h5> $25.79</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 " data-aos="flip-down">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/img8.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Meetha</h4>
+											<p>Sed id magna vitae eros sagittis euismod.</p>
+											<h5> $22.79</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 " data-aos="flip-down">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/img9.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Offers</h4>
+											<p>Sed id magna vitae eros sagittis euismod.</p>
+											<h5> $24.79</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+
+<script>
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml6 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml6 .letter',
+    translateY: ["1.1em", 0],
+    translateZ: 0,
+    duration: 750,
+    delay: (el, i) => 50 * i
+  })
+</script>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "kiloapp/base.html" %}
+
+{% block content %}
+
+<div class="col-lg-4 col-md-6 special-grid " >
+<div class="gallery-single fix"data-aos="flip-up">
+<div class="why-text">
+        <h4>{{post.name}}</h4>
+        <p>{{post.description}}</p>
+    </div>
+    <img src="{{post.cover.url}}" class="img-fluid" alt="Image">
+    <h4 class="something1">{{ post.name}}</h4>
+    <h5 class="something2">Rs {{ post.price }}</h5>
+    <a href="{% url 'food-detail' post.id %}"><h5 class="something3">Add To Cart</h5></a>
+</div>
+</div>
+
+{% endblock %}

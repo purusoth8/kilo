@@ -1,0 +1,556 @@
+	
+<!-- Start Menu -->
+	<div class="menu-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="heading-title text-center">
+						<h2>Special Menu</h2>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row inner-menu-box">
+				<div class="col-3">
+					<div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+						<a class="nav-link active" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">Picked For You</a>
+						<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Biriyani</a>
+						<a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Curries</</a>
+						<a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Garlic Rice</a>
+						<a class="nav-link" id="v-pills-settings-tab1" data-toggle="pill" href="#v-pills-settings1" role="tab" aria-controls="v-pills-settings1" aria-selected="false">Juice Bar</a>
+						<a class="nav-link" id="v-pills-settings-tab2" data-toggle="pill" href="#v-pills-settings2" role="tab" aria-controls="v-pills-settings1" aria-selected="false">Kilo koththu</a>
+
+					</div>
+				</div>
+				
+				<div class="col-9">
+					<div class="tab-content" id="v-pills-tabContent">
+						<div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+							<div class="row">
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/1Hyderabad Authentic Biryani.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Hyderabad Authentic Biryani</h4>
+											<p>Basmathi Rice ( 2 person can share ) chicken ( 2pies ) Raitha salled Gravy</p>
+											<h5>Rs 1,250</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/2Hyderabad style chicken 1 potion.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Hyderabad style chicken 1 potion</h4>
+											<p>Hyderabad style chicken 1 person biriyani Basmathi Rice Raitha salled Gravy</p>
+											<h5>Rs 700</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/3Garlic rice with chicken.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Garlic rice with chicken</h4>
+											<p>Garlic rice with chicken</p>
+											<h5>Rs 600</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid lunch">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/4Kilo koththu.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Kilo koththu</h4>
+											<p>Chicken mix with koththu ( 1 potion)</p>
+											<h5>Rs 600</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid lunch">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/5Masala mix with chicken koththu.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Masala mix with chicken koththu</h4>
+											<p></p>
+											<h5>Rs 750</h5>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							
+						</div>
+						<div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+							<div class="row">
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/6Vegetable Biryani (1 kg).jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Vegetable Biryani (1 kg)</h4>
+											<p>Vegitable Biriyani is an Aromatic Rice Dish Made by Cooking Basmathi Rice with mix Veggies, Herbs and Biriyani Spices.</p>
+											<h5>Rs 950</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/7Seafood Biryani (1 kg).jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Seafood Biryani (1 kg)</h4>
+											<p>Hyderabad style Authentic (prawns , cuttle fish ,fish mix with basmati rice, 1KG with pot )</p>
+											<h5>Rs 1,500</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/8Combo packs.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Combo packs</h4>
+											<p>2 Hyderabad style chicken biriyani ( 2kg potion ) 1 vegitable biriyani</p>
+											<h5>Rs 2,750</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/9Chiken wings potion.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Chiken wings potion</h4>
+											<p>6 pies of wings</p>
+											<h5>Rs 400</h5>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/10Kilobiriyani rice and curry.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Kilobiriyani rice and curry</h4>
+											<p>Rice and curry single potion</p>
+											<h5>Rs 290</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/11Kilo koththu.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>11Kilo koththu</h4>
+											<p>Chicken mix with koththu ( 1 potion)</p>
+											<h5>Rs 600</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/12Masala mix with chicken koththu.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>12Masala mix with chicken koththu</h4>
+											<p>Masala mix with spicy chicken koththu</p>
+											<h5>Rs 750</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/13Watermelon juice.webp'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Watermelon juice</h4>
+											<p>Refreshing and Cool Watermelon Juice with a Splash of Lime is the Perfect Drink to Enjoy on a Hot Summer Day</p>
+											<h5>Rs 350</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/14Hyderabad style chicken 1 potion.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Hyderabad style chicken 1 potion</h4>
+											<p>Hyderabad style chicken 1 person biriyani Basmathi Rice Raitha salled Gravy</p>
+											<h5>Rs 700</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/15Chicken and cheese koththu.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Chicken and cheese koththu</h4>
+											<p>Chicken ,cheese and vegitable mix with koththu</p>
+											<h5>Rs 850</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/16Thindukal Thalapakatti Biryani (1 kg).jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Thindukal Thalapakatti Biryani (1 kg)</h4>
+											<p>Thalappakatti Style Authentic south indianBiriyani (1kg , with pot (suduru samba )</p>
+											<h5>Rs 1,200</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/17Mini Chicken Submarine.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Mini Chicken Submarine</h4>
+											<p></p>
+											<h5>Rs 250</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/18vegetable Mongolian Rice.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>vegetable Mongolian Rice</h4>
+											<p>Vegetable mix with Rice and sauce</p>
+											<h5>Rs 600</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/19Dessert.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Dessert</h4>
+											<p>custard pudding</p>
+											<h5>Rs 150</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/20Chicken Mongolian Rice.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Chicken Mongolian Rice</h4>
+											<p></p>
+											<h5>Rs 750</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/21prawn Biriyani.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>prawn Biriyani</h4>
+											<p></p>
+											<h5>Rs 1,350</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 special-grid drinks">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/22Seafood Mongolian.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>22Seafood Mongolian</h4>
+											<p></p>
+											<h5>Rs 1,200</h5>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							
+						</div>
+						<div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+							<div class="row">
+								<div class="col-lg-4 col-md-6 special-grid lunch">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/23Beef Kurma.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Beef Kurma</h4>
+											<p>Choice of Size 250gms or 500gms</p>
+											<h5>Rs 1,400 - 2,050</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid lunch">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/24Chicken Kurma.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Chicken Kurma</h4>
+											<p>chickem Korma is a indian dish consisting of meat that are braised with curd or yougurt</p>
+											<h5>Rs 950 - 1,250</h5>
+										</div>
+									</div>
+								</div>
+
+								<div class="col-lg-4 col-md-6 special-grid lunch">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/25Fish Masala Curry.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Fish Masala Curry</h4>
+											<p>Spicy Fish masala is prepared with wild sold cooked in tomatoes and indian spices</p>
+											<h5>Rs 1,000 - 1,300</h5>
+										</div>
+									</div>
+								</div>
+								
+								
+								<div class="col-lg-4 col-md-6 special-grid lunch">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/26Prawn Masala Curry.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Prawn Masala Curry</h4>
+											<p>Authentic indian Prawn masala</p>
+											<h5>Rs 1,200 - 1,500</h5>
+										</div>
+									</div>
+								</div>
+								
+								
+								<div class="col-lg-4 col-md-6 special-grid lunch">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/27Brinjal Kurma.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Brinjal Kurma</h4>
+											<p>Brinjal kuruma</p>
+											<h5>Rs 800 - 1,200</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+							<div class="row">
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/28Prawn Galic Rice.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Prawn Galic Rice</h4>
+											<p>chicken and Prawn mix with Garlic Rice</p>
+											<h5>Rs 1,350</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/29Garlic Rice.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Garlic Rice</h4>
+											<p>Garlic Butter Rice is the Perfect side for any Meal.its full of Flavor, Buttery,Garlicky and so good you can eat plain</p>
+											<h5>Rs 800</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/30Garlic rice with chicken.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Garlic rice with chicken</h4>
+											<p>Garlic rice with chicken</p>
+											<h5>Rs 600</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/31Garlic rice with chicken.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Garlic rice with chicken</h4>
+											<p>Garlic rice with chicken( 1kg with pot )</p>
+											<h5>Rs 1,200</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/32Mix fried rice with chicken.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Mix fried rice with chicken</h4>
+											<p>Vegitable fried rice mix with chicken</p>
+											<h5>Rs 550</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="v-pills-settings1" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+							<div class="row">
+							
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/13Watermelon juice.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Watermelon juice</h4>
+											<p>Refreshing and Cool Watermelon Juice with a Splash of Lime is the Perfect Drink to Enjoy on a Hot Summer Day</p>
+											<h5>Rs </h5>
+										</div>
+									</div>
+								</div>
+							
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/33Lime juice.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Lime juice</h4>
+											<p>A Refreshing Drink of fresh Lime juice</p>
+											<h5>Rs 200</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/34Lemon and Mint Juice.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Lemon and Mint Juice</h4>
+											<p></p>
+											<h5>Rs 250</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/35Mango Lassi.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Mango Lassi</h4>
+											<p>Fresh mango lassi</p>
+											<h5>Rs 300</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/36Papaya juice.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Papaya juice</h4>
+											<p>Fresh Papaya Juice</p>
+											<h5>Rs 190</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/37Avacado Smoothie.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Avacado Smoothie</h4>
+											<p>Combined the avacado milk and yougurt , honey and ice cubes</p>
+											<h5>Rs 350</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/38Watermelon juice.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Watermelon juice</h4>
+											<p>Fresh watermelon</p>
+											<h5>Rs 150</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/39Carrot and Orange juice.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Carrot and Orange juice</h4>
+											<p>Freshcarrot and orange Healthy juice</p>
+											<h5>Rs 300</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/40Lassi (Sweet or Salt ).jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>40Lassi (Sweet or Salt )</h4>
+											<p></p>
+											<h5>Rs 300</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="v-pills-settings2" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+							<div class="row">
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/12Masala mix with chicken koththu.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Masala mix with chicken koththu</h4>
+											<p>Masala mix with spicy chicken koththu</p>
+											<h5>Rs 750</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/15Chicken and cheese koththu.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Chicken and cheese koththu</h4>
+											<p>Chicken ,cheese and vegitable mix with koththu</p>
+											<h5>Rs 850</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/4Kilo koththu.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Kilo koththu</h4>
+											<p>Chicken mix with koththu ( 1 potion)</p>
+											<h5>Rs 600</h5>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/42Arabian Shawarma.jpg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Arabian Shawarma</h4>
+											<p></p>
+											<h5>Rs 500</h5>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-lg-4 col-md-6 special-grid dinner">
+									<div class="gallery-single fix">
+										<img src="{% static 'resta/images/4Kilo koththu.jpeg'%}" class="img-fluid" alt="Image">
+										<div class="why-text">
+											<h4>Kilo koththu</h4>
+											<p>Chicken Mix with koththu ( full potion ) 1kg</p>
+											<h5>Rs 900</h5>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
