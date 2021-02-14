@@ -934,7 +934,18 @@ button:focus{
 /*------------------------------------------------------------------
     All Pages
 -------------------------------------------------------------------*/
-
+.page-breadcrumb1 {
+    height: 100vh;
+    background: url(../images/slide1.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	
+}
 .page-breadcrumb {
     padding: 250px 0 150px;
     background: url(../images/slide1.jpg) no-repeat;
@@ -944,6 +955,9 @@ button:focus{
     position: relative;
 }
 .all-page-title .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 	position: relative;
 	z-index: 2;
 }
