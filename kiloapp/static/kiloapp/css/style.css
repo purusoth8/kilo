@@ -149,21 +149,7 @@ input{
 /*------------------------------------------------------------------
     SKELETON
 -------------------------------------------------------------------*/
-.smt {
-    color: #fff;
-    text-align: center;
-    font-family: Rock Salt, sans-serif;
-  }
-  
-  .smt-r1 {
-    font-size: 2em;
-    line-height: 1.4em;
-  }
-  
-  .smt-r2 {
-    font-size: 6em;
-    line-height: 1em;
-  }
+
   .ml6 .text-wrapper {
     position: relative;
     display: inline-block;
@@ -962,7 +948,7 @@ button:focus{
 	z-index: 2;
 }
 .all-page-title::before{
-	background: #010101;
+	background: #050505;
 	content: "";
 	height: 100%;
 	left: 0;
@@ -973,10 +959,10 @@ button:focus{
 	opacity: 0.8;	
 }
 .all-page-title h1{
-	color: #ffffff;
+    font-family: cursive;
+    color: #f51e1e;
 	padding: 0px;
     text-align: center;
-    font-family: Rock Salt, sans-serif;
     font-size: 2em;
     line-height: 1.4em;
 }
