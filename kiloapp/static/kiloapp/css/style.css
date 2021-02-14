@@ -581,7 +581,7 @@ button:focus{
     bottom: -100%;
     right: 0;
     height: 100%;
-    background: #ffdd4681;
+    background: #ffdd46c5;
     padding: 12px 12px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -922,7 +922,7 @@ button:focus{
 -------------------------------------------------------------------*/
 .page-breadcrumb1 {
     height: 100vh;
-    background: url(../images/slide1.jpg) no-repeat;
+    background: url(../images/slide2.jpg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: 0 0;
@@ -948,7 +948,7 @@ button:focus{
 	z-index: 2;
 }
 .all-page-title::before{
-	background: #050505;
+	background: #0505059c;
 	content: "";
 	height: 100%;
 	left: 0;
@@ -959,11 +959,11 @@ button:focus{
 	opacity: 0.8;	
 }
 .all-page-title h1{
-    font-family: cursive;
-    color: #f51e1e;
+    color: #ffffff;
+    text-shadow: 2px 2px #fdb827;
 	padding: 0px;
     text-align: center;
-    font-size: 2em;
+    font-size: 3em;
     line-height: 1.4em;
 }
 
