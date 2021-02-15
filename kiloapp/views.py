@@ -2,7 +2,12 @@ from django.shortcuts import render
 from .models import Post
 from django.views.generic import ListView,DetailView
 
-
+food_choice=[
+    ('Biriyani','Biriyani'),
+    ('Curries','Curries'),
+    ('Garlic Rice','Garlic Rice'),
+    ('Juice Bar','Juice Bar'),
+    ('Kilo koththu','Kilo koththu')]
 
 import requests
 # Create your views here.
@@ -25,6 +30,7 @@ class PostDetailView(DetailView):
 
 def menu(request):
     context={
+        'cho':food_choice,
         'posts':Post.objects.all()
     }
     return render(request,'kiloapp/menu.html',context)

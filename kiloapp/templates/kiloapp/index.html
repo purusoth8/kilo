@@ -1,304 +1,311 @@
-{% extends "kiloapp/base.html" %}
- 
-{% block content %}
-{% load static%}
+{% extends "kiloapp/base.html" %} {% block content %} {% load static%}
 
 <div class="all-page-title page-breadcrumb1" data-aos="fade-left">
-	<div class="container">
-		<div class="row">
-			<h1>Welcome to Kilo Biriyani</h1>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <h1>Welcome to Kilo Biriyani</h1>
+        </div>
+    </div>
 </div>
 
 
-	<!-- Start About -->
-	<h1>
-		{% if messages %}
-		{% for message in messages %}
-		<div class="alert alert-{{ message.tags }}">
-		{{ message }}
-		<div>
-		{% endfor %}
-	{% endif %}
-	</h1>
+<!-- Start About -->
+<h1>
+    {% if messages %} {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+        {{ message }}
+        <div>
+            {% endfor %} {% endif %}
+</h1>
 
-	<div>
-		<div class="about-section-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-6 col-md-6 col-sm-8 text-center">
-					<div class="inner-column">
-						
-						<h1>Fast and Easy <span data-aos="fade-right">to Order fresh biryani on your finger tips</span></h1>
-						<p>FLAT Rs. 200 OFF on 1st order on min. order amount of Rs 750 and above. Use Code FLAT200. (TnC Apply)</p>
-						<p>Get a Phirni Tohfa FREE with orders above Rs. 750/-. Use code BBKTOHFA</p>
-						<p>Now Also Earn Upto 20% Loyalty Cashback on Every Website and APP Order</p>
-						<a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Order Now</a>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6 col-sm-8" data-aos="zoom-in-right">
-					<img src="{% static 'kiloapp/images/cover.jpeg'%}" alt="" class="img-fluid" >
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End About -->
-		<div class="all-page-title page-breadcrumb" data-aos="fade-left">
-		<div class="container text-center">
-			<div class="row">
-				<h1 style="margin-left:20%;">Spacial Menu</h1>
-			</div>
-		</div>
-	</div>
+<div>
+    <div class="about-section-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-8 text-center">
+                    <div class="inner-column">
 
-<!-- Start Menu -->
-	<div class="menu-box">
-		<div class="container">
-			
-			<div class="row inner-menu-box">
-
-				<div class="col-3">
-
-
-					<div style="position: -webkit-sticky;top: 150px;position: sticky;" class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-						<a class="nav-link active" id="v-pills-special-tab" data-toggle="pill" href="#v-pills-special" role="tab" aria-controls="v-pills-special" data-aos="flip-up" aria-selected="true">Special</a>
-						<a class="nav-link" id="v-pills-biriyani-tab" data-toggle="pill" href="#v-pills-biriyani" role="tab" aria-controls="v-pills-biriyani"data-aos="flip-up" aria-selected="false">Biriyani</a>
-						<a class="nav-link" id="v-pills-curries-tab" data-toggle="pill" href="#v-pills-curries" role="tab" aria-controls="v-pills-curries" data-aos="flip-up" aria-selected="false">Curries</</a>
-						<a class="nav-link" id="garlicrice-tab" data-toggle="pill" href="#garlicrice" role="tab" aria-controls="garlicrice" data-aos="flip-up" aria-selected="false">Garlic Rice</a>
-						<a class="nav-link" id="juicebar-tab" data-toggle="pill" href="#juicebar" role="tab" aria-controls="juicebar" data-aos="flip-up" aria-selected="false">Juice Bar</a>
-						<a class="nav-link" id="kilokoththu-tab" data-toggle="pill" href="#kilokoththu" role="tab" aria-controls="kilokoththu" data-aos="flip-up" aria-selected="false">Kilo koththu</a>
-
-					</div>
-				</div>
-				<div class="col-9 content">
-					<div class="tab-content" id="v-pills-tabContent">
-						<div class="tab-pane fade show active" id="v-pills-special" role="tabpanel" aria-labelledby="v-pills-special-tab">
-							<div class="row">
-								{% for post in posts %}
-								{% if post.spacial == True %}
-
-								<div class="col-lg-4 col-md-6 special-grid " >
-									<div class="gallery-single fix" data-aos="flip-up">
-									 <div class="why-text">
-											<h4>{{post.name}}</h4>
-											<p>{{post.description}}</p>
-										</div>
-										<img src="{{post.cover.url}}" class="img-fluid" alt="Image">
-										<h4 class="something1">{{ post.name}}</h4>
-										<h5 class="something2">Rs {{ post.price }}</h5>
-										{% comment %} <a href="{% url 'update_cart' post.id %}?qty=12"><h5 class="something3">Add To Cart</h5></a> {% endcomment %}
-										<a ><h5 class="something3">
-										<form method='GET' action='{% url "update_cart" post.id %}'>
-										<input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty"/>
-										<input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart'/>
-										</form></h5></a>
-
-										{% comment %} <a href="{% url 'food-detail' post.id %}"><h5 class="something3">Add To Cart</h5></a> {% endcomment %}
-									</div>
-								</div>
-								{% endif %}
-								{% endfor %}
-
-							</div>
-							
-						</div>
-						<div class="tab-pane fade" id="v-pills-biriyani" role="tabpanel" aria-labelledby="v-pills-biriyani-tab">
-							<div class="row">
-								
-								{% for post in posts %}
-								{% if post.food == 'Biriyani' %}
-								<div class="col-lg-4 col-md-6 special-grid" >
-									<div class="gallery-single fix" data-aos="flip-up">
-									 <div class="why-text">
-											<h4>{{post.name}}</h4>
-											<p>{{post.description}}</p>
-										</div>
-										<img src="{{post.cover.url}}" class="img-fluid" alt="Image">
-										<h4 class="something1">{{ post.name}}</h4>
-										<h5 class="something2">Rs {{ post.price }}</h5>
-										<a ><h5 class="something3">
-										<form method='GET' action='{% url "update_cart" post.id %}'>
-										<input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty"/>
-										<input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart'/>
-										</form></h5></a>
-									</div>
-								</div>
-								{% endif %}
-								{% endfor %}
-							</div>
-						</div>
-
-						<div class="tab-pane fade" id="v-pills-curries" role="tabpanel" aria-labelledby="v-pills-curries-tab">
-							<div class="row">
-								
-								{% for post in posts %}
-								{% if post.food == 'Curries' %}
-								<div class="col-lg-4 col-md-6 special-grid" >
-									<div class="gallery-single fix" data-aos="flip-up">
-									 <div class="why-text">
-											<h4>{{post.name}}</h4>
-											<p>{{post.description}}</p>
-										</div>
-										<img src="{{post.cover.url}}" class="img-fluid" alt="Image">
-										<h4 class="something1">{{ post.name}}</h4>
-										<h5 class="something2">Rs {{ post.price }}</h5>
-										<a ><h5 class="something3">
-										<form method='GET' action='{% url "update_cart" post.id %}'>
-										<input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty"/>
-										<input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart'/>
-										</form></h5></a>
-									</div>
-								</div>
-								{% endif %}
-								{% endfor %}
-							</div>
-						</div>
-
-						<div class="tab-pane fade" id="garlicrice" role="tabpanel" aria-labelledby="garlicrice-tab">
-							<div class="row">
-								
-								{% for post in posts %}
-								{% if post.food == 'Garlic Rice' %}
-								<div class="col-lg-4 col-md-6 special-grid">
-									<div class="gallery-single fix" data-aos="flip-up">
-									 <div class="why-text">
-											<h4>{{post.name}}</h4>
-											<p>{{post.description}}</p>
-										</div>
-										<img src="{{post.cover.url}}" class="img-fluid" alt="Image">
-										<h4 class="something1">{{ post.name}}</h4>
-										<h5 class="something2">Rs {{ post.price }}</h5>
-										<a ><h5 class="something3">
-										<form method='GET' action='{% url "update_cart" post.id %}'>
-										<input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty"/>
-										<input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart'/>
-										</form></h5></a>
-									</div>
-								</div>
-								{% endif %}
-								{% endfor %}
-								
-								
-							</div>
-						</div>
-						<div class="tab-pane fade" id="juicebar" role="tabpanel" aria-labelledby="juicebar-tab">
-							<div class="row">
-							
-								{% for post in posts %}
-								{% if post.food == 'Juice Bar' %}
-								<div class="col-lg-4 col-md-6 special-grid " >
-									<div class="gallery-single fix" data-aos="flip-up">
-									 <div class="why-text">
-											<h4>{{post.name}}</h4>
-											<p>{{post.description}}</p>
-										</div>
-										<img src="{{post.cover.url}}" class="img-fluid" alt="Image">
-										<h4 class="something1">{{ post.name}}</h4>
-										<h5 class="something2">Rs {{ post.price }}</h5>
-										<a ><h5 class="something3">
-										<form method='GET' action='{% url "update_cart" post.id %}'>
-										<input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty"/>
-										<input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart'/>
-										</form></h5></a>
-									</div>
-								</div>
-								{% endif %}
-								{% endfor %}
-								
-
-							</div>
-						</div>
- 
-						<div class="tab-pane fade" id="kilokoththu" role="tabpanel" aria-labelledby="kilokoththu-tab">
-							<div class="row">
-							
-								{% for post in posts %}
-								{% if post.food == 'Kilo koththu' %}
-								<div class="col-lg-4 col-md-6 special-grid ">
-									<div class="gallery-single fix" data-aos="flip-up">
-									 <div class="why-text">
-											<h4>{{post.name}}</h4>
-											<p>{{post.description}}</p>
-										</div>
-										<img src="{{post.cover.url}}" class="img-fluid" alt="Image">
-										<h4 class="something1">{{ post.name}}</h4>
-										<h5 class="something2">Rs {{ post.price }}</h5>
-										<a ><h5 class="something3">
-										<form method='GET' action='{% url "update_cart" post.id %}'>
-										<input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty"/>
-										<input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart'/>
-										</form></h5></a>
-									</div>
-								</div>
-								{% endif %}
-								{% endfor %}
-								
-
-							</div>
-						</div>
-
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</div>
-	</div>
-
-
-
-	<!-- Start Customer Reviews -->
-	<div class="customer-reviews-box">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="heading-title text-center">
-						<h2>OUR PROMISE</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-8 mr-auto ml-auto text-center">
-					<div id="reviews" class="carousel slide" data-ride="carousel">
-						<div class="carousel-inner mt-4">
-							<div class="carousel-item text-center active">
-								<div class="img-box p-1 m-auto">
-									<img class="d-block " src="{% static 'kiloapp/images/pro1.png'%}" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">High Quality Fresh Ingredients</strong></h5>
-								<p class="m-0 pt-3">BBK prides itself in using the freshest and handpicked ingredients</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1  m-auto">
-									<img class="d-block  " src="{% static 'kiloapp/images/pro2.png'%}" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Dum cooked fresh on every order</strong></h5>
-								<p class="m-0 pt-3">Each biryani is individually prepared in the traditional dum style with distinct layers by our khansamas in natural clay handis</p>
-							</div>
-							<div class="carousel-item text-center">
-								<div class="img-box p-1  m-auto">
-									<img class="d-block " src="{% static 'kiloapp/images/pro3.png'%}" alt="">
-								</div>
-								<h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Authentic recipes with traditional khansama style of cooking</strong></h5>
-								<p class="m-0 pt-3">BBK brings the Royal Biryani to you, prepared in the traditional dum style, slow cooked to perfection by our khansama</p>
-							</div>
-						</div>
-						<a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
-							<i class="fa fa-angle-left" aria-hidden="true"></i>
-							<span class="sr-only">Previous</span>
-						</a>
-						<a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
-							<i class="fa fa-angle-right" aria-hidden="true"></i>
-							<span class="sr-only">Next</span>
-						</a>
+                        <h1>Fast and Easy <span data-aos="fade-right">to Order fresh biryani on your finger tips</span></h1>
+                        <p>FLAT Rs. 200 OFF on 1st order on min. order amount of Rs 750 and above. Use Code FLAT200. (TnC Apply)</p>
+                        <p>Get a Phirni Tohfa FREE with orders above Rs. 750/-. Use code BBKTOHFA</p>
+                        <p>Now Also Earn Upto 20% Loyalty Cashback on Every Website and APP Order</p>
+                        <a class="btn btn-lg btn-circle btn-outline-new-white" href="#">Order Now</a>
                     </div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- End Customer Reviews -->
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-8" data-aos="zoom-in-right">
+                    <img src="{% static 'kiloapp/images/cover.jpeg'%}" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End About -->
+    <div class="all-page-title page-breadcrumb2">
+        <div class="container text-center">
+            <div class="row">
+                <h1 style="color: black;">Menu</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Start Menu -->
+    <div class="menu-box">
+        <div class="container">
+
+            <div class="row inner-menu-box">
+
+                <div class="col-3">
+
+
+                    <div style="position: -webkit-sticky;top: 150px;position: sticky;" class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="v-pills-special-tab" data-toggle="pill" href="#v-pills-special" role="tab" aria-controls="v-pills-special" data-aos="flip-up" aria-selected="true">Special</a>
+                        <a class="nav-link" id="v-pills-biriyani-tab" data-toggle="pill" href="#v-pills-biriyani" role="tab" aria-controls="v-pills-biriyani" data-aos="flip-up" aria-selected="false">Biriyani</a>
+                        <a class="nav-link" id="v-pills-curries-tab" data-toggle="pill" href="#v-pills-curries" role="tab" aria-controls="v-pills-curries" data-aos="flip-up" aria-selected="false">Curries</</a>
+                        <a class="nav-link" id="garlicrice-tab" data-toggle="pill" href="#garlicrice" role="tab" aria-controls="garlicrice" data-aos="flip-up" aria-selected="false">Garlic Rice</a>
+                        <a class="nav-link" id="juicebar-tab" data-toggle="pill" href="#juicebar" role="tab" aria-controls="juicebar" data-aos="flip-up" aria-selected="false">Juice Bar</a>
+                        <a class="nav-link" id="kilokoththu-tab" data-toggle="pill" href="#kilokoththu" role="tab" aria-controls="kilokoththu" data-aos="flip-up" aria-selected="false">Kilo koththu</a>
+
+                    </div>
+                </div>
+                <div class="col-9 content">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-special" role="tabpanel" aria-labelledby="v-pills-special-tab">
+                            <div class="row">
+                                {% for post in posts %} {% if post.spacial == True %}
+
+                                <div class="col-lg-4 col-md-6 d-flex align-self-stretch">
+                                    <div class="gallery-single fix " data-aos="flip-up">
+                                        <div class="why-text">
+                                            <h4>{{post.name}}</h4>
+                                            <p>{{post.description}}</p>
+                                        </div>
+                                        <img src="{{post.cover.url}}" class="img-fluid" alt="Image">
+                                        <h4 class="something1 " style="height: 3em;">{{ post.name}}</h4>
+                                        <h5 class="something2">Rs {{ post.price }}</h5>
+                                        {% comment %}
+                                        <a href="{% url 'update_cart' post.id %}?qty=12">
+                                            <h5 class="something3">Add To Cart</h5>
+                                        </a> {% endcomment %}
+                                        <a>
+                                            <h5 class="something3">
+                                                <form method='GET' action='{% url "update_cart" post.id %}'>
+                                                    <input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty" />
+                                                    <input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart' />
+                                                </form>
+                                            </h5>
+                                        </a>
+
+                                        {% comment %}
+                                        <a href="{% url 'food-detail' post.id %}">
+                                            <h5 class="something3">Add To Cart</h5>
+                                        </a> {% endcomment %}
+                                    </div>
+                                </div>
+                                {% endif %} {% endfor %}
+
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-biriyani" role="tabpanel" aria-labelledby="v-pills-biriyani-tab">
+                            <div class="row">
+
+                                {% for post in posts %} {% if post.food == 'Biriyani' %}
+                                <div class="col-lg-4 col-md-6 special-grid d-flex align-self-stretch">
+                                    <div class="gallery-single fix" data-aos="flip-up">
+                                        <div class="why-text">
+                                            <h4>{{post.name}}</h4>
+                                            <p>{{post.description}}</p>
+                                        </div>
+                                        <img src="{{post.cover.url}}" class="img-fluid" alt="Image">
+                                        <h4 class="something1" style="height: 3em;">{{ post.name}}</h4>
+                                        <h5 class="something2">Rs {{ post.price }}</h5>
+                                        <a>
+                                            <h5 class="something3">
+                                                <form method='GET' action='{% url "update_cart" post.id %}'>
+                                                    <input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty" />
+                                                    <input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart' />
+                                                </form>
+                                            </h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endif %} {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-curries" role="tabpanel" aria-labelledby="v-pills-curries-tab">
+                            <div class="row">
+
+                                {% for post in posts %} {% if post.food == 'Curries' %}
+                                <div class="col-lg-4 col-md-6 special-grid">
+                                    <div class="gallery-single fix" data-aos="flip-up">
+                                        <div class="why-text">
+                                            <h4>{{post.name}}</h4>
+                                            <p>{{post.description}}</p>
+                                        </div>
+                                        <img src="{{post.cover.url}}" class="img-fluid" alt="Image">
+                                        <h4 class="something1">{{ post.name}}</h4>
+                                        <h5 class="something2">Rs {{ post.price }}</h5>
+                                        <a>
+                                            <h5 class="something3">
+                                                <form method='GET' action='{% url "update_cart" post.id %}'>
+                                                    <input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty" />
+                                                    <input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart' />
+                                                </form>
+                                            </h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endif %} {% endfor %}
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="garlicrice" role="tabpanel" aria-labelledby="garlicrice-tab">
+                            <div class="row">
+
+                                {% for post in posts %} {% if post.food == 'Garlic Rice' %}
+                                <div class="col-lg-4 col-md-6 special-grid">
+                                    <div class="gallery-single fix" data-aos="flip-up">
+                                        <div class="why-text">
+                                            <h4>{{post.name}}</h4>
+                                            <p>{{post.description}}</p>
+                                        </div>
+                                        <img src="{{post.cover.url}}" class="img-fluid" alt="Image">
+                                        <h4 class="something1">{{ post.name}}</h4>
+                                        <h5 class="something2">Rs {{ post.price }}</h5>
+                                        <a>
+                                            <h5 class="something3">
+                                                <form method='GET' action='{% url "update_cart" post.id %}'>
+                                                    <input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty" />
+                                                    <input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart' />
+                                                </form>
+                                            </h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endif %} {% endfor %}
+
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="juicebar" role="tabpanel" aria-labelledby="juicebar-tab">
+                            <div class="row">
+
+                                {% for post in posts %} {% if post.food == 'Juice Bar' %}
+                                <div class="col-lg-4 col-md-6 special-grid ">
+                                    <div class="gallery-single fix" data-aos="flip-up">
+                                        <div class="why-text">
+                                            <h4>{{post.name}}</h4>
+                                            <p>{{post.description}}</p>
+                                        </div>
+                                        <img src="{{post.cover.url}}" class="img-fluid" alt="Image">
+                                        <h4 class="something1">{{ post.name}}</h4>
+                                        <h5 class="something2">Rs {{ post.price }}</h5>
+                                        <a>
+                                            <h5 class="something3">
+                                                <form method='GET' action='{% url "update_cart" post.id %}'>
+                                                    <input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty" />
+                                                    <input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart' />
+                                                </form>
+                                            </h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endif %} {% endfor %}
+
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="kilokoththu" role="tabpanel" aria-labelledby="kilokoththu-tab">
+                            <div class="row">
+
+                                {% for post in posts %} {% if post.food == 'Kilo koththu' %}
+                                <div class="col-lg-4 col-md-6 special-grid ">
+                                    <div class="gallery-single fix" data-aos="flip-up">
+                                        <div class="why-text">
+                                            <h4>{{post.name}}</h4>
+                                            <p>{{post.description}}</p>
+                                        </div>
+                                        <img src="{{post.cover.url}}" class="img-fluid" alt="Image">
+                                        <h4 class="something1">{{ post.name}}</h4>
+                                        <h5 class="something2">Rs {{ post.price }}</h5>
+                                        <a>
+                                            <h5 class="something3">
+                                                <form method='GET' action='{% url "update_cart" post.id %}'>
+                                                    <input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty" />
+                                                    <input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart' />
+                                                </form>
+                                            </h5>
+                                        </a>
+                                    </div>
+                                </div>
+                                {% endif %} {% endfor %}
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- Start Customer Reviews -->
+    <div class="customer-reviews-box">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="heading-title text-center">
+                        <h2>OUR PROMISE</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 mr-auto ml-auto text-center">
+                    <div id="reviews" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner mt-4">
+                            <div class="carousel-item text-center active">
+                                <div class="img-box p-1 m-auto">
+                                    <img class="d-block " src="{% static 'kiloapp/images/pro1.png'%}" alt="">
+                                </div>
+                                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">High Quality Fresh Ingredients</strong></h5>
+                                <p class="m-0 pt-3">BBK prides itself in using the freshest and handpicked ingredients</p>
+                            </div>
+                            <div class="carousel-item text-center">
+                                <div class="img-box p-1  m-auto">
+                                    <img class="d-block  " src="{% static 'kiloapp/images/pro2.png'%}" alt="">
+                                </div>
+                                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Dum cooked fresh on every order</strong></h5>
+                                <p class="m-0 pt-3">Each biryani is individually prepared in the traditional dum style with distinct layers by our khansamas in natural clay handis</p>
+                            </div>
+                            <div class="carousel-item text-center">
+                                <div class="img-box p-1  m-auto">
+                                    <img class="d-block " src="{% static 'kiloapp/images/pro3.png'%}" alt="">
+                                </div>
+                                <h5 class="mt-4 mb-0"><strong class="text-warning text-uppercase">Authentic recipes with traditional khansama style of cooking</strong></h5>
+                                <p class="m-0 pt-3">BBK brings the Royal Biryani to you, prepared in the traditional dum style, slow cooked to perfection by our khansama</p>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
+                            <i class="fa fa-angle-left" aria-hidden="true"></i>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
+                            <i class="fa fa-angle-right" aria-hidden="true"></i>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Customer Reviews -->
 
     {% endblock %}
