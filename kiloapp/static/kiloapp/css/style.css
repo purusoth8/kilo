@@ -1027,7 +1027,7 @@ button:focus {
 }
 
 .all-page-title::before {
-    background: #0505059c;
+    background: #05050554;
     content: "";
     height: 100%;
     left: 0;
