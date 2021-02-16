@@ -2,13 +2,32 @@ from django.shortcuts import render, HttpResponseRedirect
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
-
+from django.core.mail import send_mail
 
 
 # Create your views here.
 from kiloapp.models import Post
 
 from .models import Cart,CartItem
+
+def mail(request):
+    try:
+        the_id = request.session['cart_id']
+    except:
+        the_id=None
+    if the_id:
+        cart = Cart.objects.get(id=the_id)
+        
+        context = {"cart":cart}
+    send_mail(
+    'Order for '+str(cart.author),
+    'Address :'+cart.address+
+    '\n Total '+str(cart.total)+str(carti),
+    'mammamaathiyosi@gmail.com',
+    ['wecove1584@hrandod.com'],
+    fail_silently=False,)
+
+    return render(request,'carts/mail.html',context)
 
 @login_required
 def view(request):
