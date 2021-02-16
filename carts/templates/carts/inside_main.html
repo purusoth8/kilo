@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kilo Biriyani</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    {% for item in cart.cartitem_set.all %}
+
+    <div class="md-5">
+        <h4>Name : {{item.product}}, Quantity : {{item.quantity}}, Price : Rs{{item.product.price}}</h4>
+
+    </div>
+
+    {% endfor %}
+    <div>
+
+        <div>
+            <div class="payment-info">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h1>Delivery Details</h1>
+                </div>
+                <div>
+                    <h3 class="d-flex justify-content-between information">Name</h3>
+                    <div class="d-flex justify-content-between information">
+                        <h4>{{cart.author}}</h4>
+                    </div>
+                    <br>
+                    <h3 class="d-flex justify-content-between information">Address</h3>
+                    <div class="d-flex justify-content-between information">
+                        <h4>{{cart.address}}</h4>
+                    </div>
+                    <br>
+
+                    <h3 class="d-flex justify-content-between information">Contact Number</h3>
+                    <div class="d-flex justify-content-between information">
+                        <h4>{{cart.phone}}</h4>
+                    </div>
+                    <hr class="line">
+
+                    <div class="d-flex justify-content-between information">
+                        <h3>Subtotal</h3>
+                        <h3>Rs {{cart.total}}.00</h3>
+                    </div>
+                    <div class="d-flex justify-content-between information">
+                        <h3>Shipping</h3>
+                        <h3>Rs 0.00</h3>
+                    </div>
+                    <div class="d-flex justify-content-between information">
+                        <h3>Total(Incl. taxes)</h3>
+                        <h2>Rs {{cart.total}}.00</h2>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <br>
+</body>
+
+</html>

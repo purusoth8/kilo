@@ -3,6 +3,10 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.core.mail import send_mail
+from django.http import HttpResponse
+from django.template import Context
+from django.template.loader import render_to_string, get_template
+from django.core.mail import EmailMessage
 
 
 # Create your views here.
@@ -10,7 +14,10 @@ from kiloapp.models import Post
 
 from .models import Cart,CartItem
 
-def mail(request):
+def email_one(request):
+    subject = "I am a text email"
+    to = ['dekoxih700@fironia.com']
+    from_email = 'mammamaathiyosi@gmail.com'
     try:
         the_id = request.session['cart_id']
     except:
@@ -19,15 +26,34 @@ def mail(request):
         cart = Cart.objects.get(id=the_id)
         
         context = {"cart":cart}
-    send_mail(
-    'Order for '+str(cart.author),
-    'Address :'+cart.address+
-    '\n Total '+str(cart.total)+str(carti),
-    'mammamaathiyosi@gmail.com',
-    ['wecove1584@hrandod.com'],
-    fail_silently=False,)
 
-    return render(request,'carts/mail.html',context)
+    message = get_template('carts/inside_main.html').render(context)
+    msg = EmailMessage(subject, message, to=to, from_email=from_email)
+    msg.content_subtype = 'html'
+    msg.send()
+
+    return render(request,'carts/mail.html')
+
+
+# def mail(request):
+#     try:
+#         the_id = request.session['cart_id']
+#     except:
+#         the_id=None
+#     if the_id:
+#         cart = Cart.objects.get(id=the_id)
+        
+#         context = {"cart":cart}
+#     send_mail(
+#     'Order for '+str(cart.author),
+#     'Address :'+cart.address+
+#     '\n Total '+str(cart.total)+''
+#     ,
+#     'mammamaathiyosi@gmail.com',
+#     ['wecove1584@hrandod.com'],
+#     fail_silently=False,)
+
+#     return render(request,'carts/mail.html',context)
 
 @login_required
 def view(request):
