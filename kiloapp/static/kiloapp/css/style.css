@@ -115,23 +115,44 @@ label.radio input:checked+span {
 }
 
 .something1 {
-    background: #fdb927;
+    color: white;
+    background: #D7A245;
     font-size: 20px;
     text-align: center;
     font-weight: bold;
 }
 
 .something2 {
-    background: #FECA4E;
+    font-size: large;
+    font-weight: 600;
+    background: #D7A245;
     font-size: 20px;
     text-align: center;
 }
 
 .something3 {
-    background: #FEDA78;
+    color: white;
+    background: #000000;
     font-size: 20px;
     text-align: center;
     border: #01010100;
+}
+
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: white;
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: white;
 }
 
 .something4 {
@@ -148,6 +169,25 @@ label.radio input:checked+span {
 
 input {
     text-align: center;
+}
+
+.navoneplace {
+    display: inline-block;
+}
+
+.navtext {
+    font-weight: 600;
+    color: #2b2600;
+    font-size: 2em;
+    position: relative;
+    top: 20px;
+    left: 20px;
+    line-height: 80px;
+    background-color: #01010100;
+}
+
+.navtext:hover {
+    color: #ffbc2a;
 }
 
 
@@ -171,7 +211,7 @@ input {
 }
 
 body {
-    background-color: #fff3b2;
+    background-color: #ffec83;
     color: #666666;
     font-size: 15px;
     font-family: 'Rubik', sans-serif;
@@ -323,7 +363,6 @@ button:focus {
     padding: 15px 0px;
     position: fixed;
     width: 100%;
-    border-radius: 0px 0px 100px 100px;
     transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -336,7 +375,6 @@ button:focus {
     color: #010101;
     font-size: 16px;
     padding: 10px 20px;
-    border-radius: 4px;
     text-transform: uppercase;
 }
 
@@ -348,12 +386,9 @@ button:focus {
 .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link {
     background: #fc8621;
     color: #ffffff;
-    border-radius: 4px;
 }
 
 .navbar-expand-lg .navbar-nav .dropdown-menu {
-    border: none;
-    border-radius: 0px;
     padding: 10px;
     box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.5);
 }
@@ -364,12 +399,12 @@ button:focus {
 }
 
 .navbar-expand-lg .navbar-nav .dropdown-menu a.dropdown-item:hover {
-    background: #fdb827;
+    background: #EB7A20;
     color: #ffffff;
 }
 
 .navbar-light .navbar-toggler:hover {
-    background: #fdb827;
+    background: #EB7A20;
 }
 
 
@@ -382,7 +417,7 @@ button:focus {
 }
 
 .slides-navigation a {
-    background: #fdb827;
+    background: #EB7A20;
     position: absolute;
     height: 50px;
     width: 50px;
@@ -445,9 +480,9 @@ button:focus {
 
 .btn-outline-new-white {
     color: #fff;
-    background-color: #fdb827;
+    background-color: #EB7A20;
     background-image: none;
-    border-color: #fdb827;
+    border-color: #EB7A20;
 }
 
 .btn-outline-new-white:hover {
@@ -483,8 +518,8 @@ button:focus {
 }
 
 .slides-pagination a.current {
-    background: #fdb827;
-    border: 2px solid #fdb827;
+    background: #EB7A20;
+    border: 2px solid #EB7A20;
 }
 
 
@@ -499,7 +534,7 @@ button:focus {
 }
 
 .about-section-box .img-fluid {
-    box-shadow: 20px 20px 0px #fdb827;
+    box-shadow: 20px 20px 0px #EB7A20;
 }
 
 .inner-column {
@@ -514,7 +549,7 @@ button:focus {
 }
 
 .inner-column h1 span {
-    color: #fdb827;
+    color: #EB7A20;
 }
 
 .inner-column h4 {
@@ -593,7 +628,7 @@ button:focus {
 .inner-menu-box {}
 
 .inner-menu-box .nav-pills .nav-link.active {
-    background: #fdb827;
+    background: #EB7A20;
 }
 
 .inner-menu-box .nav-pills .nav-link {
@@ -601,7 +636,7 @@ button:focus {
 }
 
 .inner-menu-box .nav-pills .nav-link:hover {
-    background: #fdb827;
+    background: #EB7A20;
     color: #ffffff;
 }
 
@@ -622,20 +657,20 @@ button:focus {
     bottom: -100%;
     right: 0;
     height: 100%;
-    background: #ffdd46c5;
+    background: #000000c5;
     padding: 12px 12px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
 
 .why-text h4 {
-    color: black;
+    color: rgb(255, 255, 255);
     font-weight: 500;
     font-family: 'Rubik', sans-serif;
 }
 
 .why-text p {
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 13px;
     border-bottom: 1px dashed #010101;
     margin: 0px;
@@ -679,7 +714,7 @@ button:focus {
 }
 
 .tz-gallery .lightbox {
-    border: 3px solid #fdb827;
+    border: 3px solid #EB7A20;
     display: inline-block;
     margin-bottom: 30px;
 }
@@ -711,7 +746,7 @@ button:focus {
 }
 
 .text-warning {
-    color: #fdb827 !important;
+    color: white !important;
     font-size: 24px;
 }
 
@@ -731,7 +766,7 @@ button:focus {
 }
 
 #reviews .carousel-control-prev {
-    background: #fdb827;
+    background: #EB7A20;
     color: #ffffff;
     display: block;
     position: absolute;
@@ -749,7 +784,7 @@ button:focus {
 }
 
 #reviews .carousel-control-next {
-    background: #fdb827;
+    background: #EB7A20;
     color: #ffffff;
     display: block;
     position: absolute;
@@ -772,7 +807,7 @@ button:focus {
 -------------------------------------------------------------------*/
 
 .contact-imfo-box {
-    background: #fdb827;
+    background: #EB7A20;
     padding: 30px 0;
     border-radius: 100px;
 }
@@ -789,7 +824,7 @@ button:focus {
     line-height: 60px;
     text-align: center;
     background: #fff;
-    color: #fdb827;
+    color: #EB7A20;
     font-size: 30px;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
@@ -896,7 +931,7 @@ button:focus {
 }
 
 .footer-area p.lead a:hover {
-    color: #fdb827;
+    color: #EB7A20;
 }
 
 .footer-area p a {
@@ -905,7 +940,7 @@ button:focus {
 }
 
 .footer-area p a:hover {
-    color: #fdb827;
+    color: #EB7A20;
 }
 
 .subscribe_form {
@@ -929,7 +964,7 @@ button:focus {
 }
 
 .subscribe_form .submit {
-    background-color: #fdb827;
+    background-color: #EB7A20;
     color: #fff;
     font-size: 16px;
     font-weight: 500;
@@ -991,7 +1026,7 @@ button:focus {
 
 .page-breadcrumb1 {
     height: 100vh;
-    background: url(../images/slide2.jpg) no-repeat;
+    background: url(../images/cover.jpeg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: 0 0;
@@ -999,6 +1034,26 @@ button:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* animation: mymove 5s infinite; */
+}
+
+@keyframes mymove {
+    0% {
+        background: url(../images/slide2.jpg);
+        background-size: auto;
+    }
+    25% {
+        background: url(../images/slide3.jpg);
+        background-size: auto;
+    }
+    50% {
+        background: url(../images/slide1.jpg);
+        background-size: 1619px 1079px;
+    }
+    100% {
+        background: url(../images/slide2.jpg);
+        background-size: auto;
+    }
 }
 
 .page-breadcrumb {
@@ -1011,6 +1066,7 @@ button:focus {
 }
 
 .page-breadcrumb2 {
+    background-color: #010101;
     padding: 2em 0 2em;
     background-attachment: fixed;
     background-size: cover;
@@ -1040,7 +1096,24 @@ button:focus {
 
 .all-page-title h1 {
     color: #ffffff;
-    text-shadow: 2px 2px #fdb827;
+    padding: 0px;
+    text-align: center;
+    font-size: 3em;
+    line-height: 1.4em;
+}
+
+.all-page-title1 h1 {
+    padding: 2em 0 2em;
+    background: #05050554;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    opacity: 0.8;
+    color: #ffffff;
     padding: 0px;
     text-align: center;
     font-size: 3em;
@@ -1145,7 +1218,7 @@ button:focus {
     content: "";
     width: 100%;
     height: 100%;
-    background: #fdb827;
+    background: #EB7A20;
     border-radius: 0 20px 20px 20px;
     position: absolute;
     top: 0;
@@ -1166,7 +1239,7 @@ button:focus {
     font-size: 22px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #fdb827;
+    color: #EB7A20;
     text-transform: uppercase;
     margin-bottom: 7px;
 }
@@ -1209,12 +1282,12 @@ button:focus {
 }
 
 .form-control:focus {
-    border: 1px solid #fdb827;
+    border: 1px solid #EB7A20;
     box-shadow: none;
 }
 
 .form-group .picker__input.picker__input--active {
-    border-color: #fdb827;
+    border-color: #EB7A20;
 }
 
 .submit-button {
@@ -1222,10 +1295,10 @@ button:focus {
 }
 
 .btn.btn-common {
-    color: #fdb827;
+    color: #EB7A20;
     background-color: transparent;
     background-image: none;
-    border-color: #fdb827;
+    border-color: #EB7A20;
 }
 
 .btn.btn-common:hover {
@@ -1270,7 +1343,7 @@ button:focus {
 }
 
 .blog-detail ul li span {
-    color: #fdb827;
+    color: #EB7A20;
     cursor: pointer;
 }
 
@@ -1314,7 +1387,7 @@ button:focus {
     position: absolute;
     right: 0px;
     top: 0px;
-    background: #fdb827;
+    background: #EB7A20;
     font-size: 18px;
     color: #ffffff;
     padding: 5px 15px 5px 5px;
@@ -1339,7 +1412,7 @@ button:focus {
 }
 
 .inner-blog-detail ul li span {
-    color: #fdb827;
+    color: #EB7A20;
 }
 
 .inner-blog-detail p {
@@ -1347,7 +1420,7 @@ button:focus {
 }
 
 .details-page blockquote {
-    border-left: 5px solid #fdb827;
+    border-left: 5px solid #EB7A20;
 }
 
 .details-page blockquote {
@@ -1404,12 +1477,12 @@ blockquote {
 }
 
 .line-left-social ul li a:hover {
-    background: #fdb827;
+    background: #EB7A20;
     color: #ffffff;
 }
 
 .line-right-social ul li a:hover {
-    background: #fdb827;
+    background: #EB7A20;
     color: #ffffff;
 }
 
@@ -1481,7 +1554,7 @@ blockquote {
 }
 
 .right-btn-re:hover {
-    background: #fdb827;
+    background: #EB7A20;
     color: #ffffff !important;
 }
 
@@ -1516,10 +1589,10 @@ blockquote {
 }
 
 .btn-submit {
-    color: #fdb827;
+    color: #EB7A20;
     background-color: transparent;
     background-image: none;
-    border-color: #fdb827;
+    border-color: #EB7A20;
 }
 
 .btn-submit:hover {
@@ -1584,7 +1657,7 @@ blockquote {
 }
 
 .blog-categories ul li a:hover {
-    color: #fdb827;
+    color: #EB7A20;
 }
 
 .recent-box-blog {
@@ -1605,7 +1678,7 @@ blockquote {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fdb827;
+    background-color: #EB7A20;
     opacity: 0.4;
     transform: scale(0);
     -webkit-transform: scale(0);
@@ -1661,7 +1734,7 @@ blockquote {
 
 .blog-tag-box ul li a:hover {
     color: #ffffff;
-    background: #fdb827;
+    background: #EB7A20;
 }
 
 .contact-box {
@@ -1684,7 +1757,7 @@ blockquote {
     height: 40px;
     text-align: center;
     line-height: 40px;
-    background: #fdb827;
+    background: #EB7A20;
     color: #ffffff;
     cursor: pointer;
     border: 0;

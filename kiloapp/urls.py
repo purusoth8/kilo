@@ -7,6 +7,7 @@ urlpatterns = [
     path('menu/',views.menu,name='menu'),
     path('contact/',views.contact,name='contact'),
     path('blog/',views.blog,name='blog'),
+    path('about/',views.about,name='about'),
     path('post/<int:pk>/', PostDetailView.as_view(),name='food-detail'),
 
     

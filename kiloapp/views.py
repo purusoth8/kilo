@@ -10,6 +10,15 @@ food_choice=[
     ('Kilo koththu','Kilo koththu')]
 
 import requests
+
+
+def about(request):
+    context={
+        'posts':Post.objects.all()
+    }
+    return render(request,'kiloapp/about.html',context)
+
+
 # Create your views here.
 def index(request):
     context={
