@@ -15,9 +15,6 @@ from kiloapp.models import Post
 from .models import Cart,CartItem
 
 def email_one(request):
-    subject = "I am a text email"
-    to = ['dekoxih700@fironia.com']
-    from_email = 'mammamaathiyosi@gmail.com'
     try:
         the_id = request.session['cart_id']
     except:
@@ -26,6 +23,10 @@ def email_one(request):
         cart = Cart.objects.get(id=the_id)
         
         context = {"cart":cart}
+    subject = "Order for "+str(cart.author)
+    to = ['dekoxih700@fironia.com',str(request.user.email),'mammamaathiyosi@gmail.com']
+    from_email = 'mammamaathiyosi@gmail.com'
+    
 
     message = get_template('carts/inside_main.html').render(context)
     msg = EmailMessage(subject, message, to=to, from_email=from_email)
