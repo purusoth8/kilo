@@ -1,9 +1,8 @@
-{% extends "kiloapp/base.html" %}
-
-{% block content %}
+{% extends "kiloapp/base.html" %} {% block content %}
 <div style="height: 150px;"></div>
 
-    {% load crispy_forms_tags %}
+{% load crispy_forms_tags %}
+<div class="m-sm-5 m-1 content-section">
 
     <!-- <h1>{{user.username}}</h1>
     <h1>{{user.profile.address}}</h1>
@@ -15,14 +14,14 @@
         {% csrf_token %}
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Profile Info</legend>
-            {{ u_form|crispy }}
-            {{ p_form|crispy }}
+            {{ u_form|crispy }} {{ p_form|crispy }}
 
         </fieldset>
         <div class="form-group">
             <button class="btn btn-outline-info" type="submit">Update</button>
         </div>
     </form>
+</div>
 
 
 {% endblock %}

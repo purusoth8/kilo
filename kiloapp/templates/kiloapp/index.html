@@ -18,12 +18,69 @@
             {% endfor %} {% endif %}
 </h1>
 
+<div class="customer-reviews-box theback">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="heading-title text-center">
+                    <h2>OUR PROMISE</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 mr-auto ml-auto text-center">
+                <div id="reviews" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner mt-4">
+                        <div class="carousel-item text-center active">
+                            <div class="img-box p-1 m-auto">
+                                <img class="d-block " src="{% static 'kiloapp/images/pro1.png'%}" alt="">
+                            </div>
+                            <h5 class="mt-4 mb-0"><strong class="text-warning1 text-uppercase">High Quality Fresh Ingredients</strong></h5>
+                            <p class="m-0 pt-3 " style="color: rgb(0, 0, 0);">BBK prides itself in using the freshest and handpicked ingredients</p>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="img-box p-1  m-auto">
+                                <img class="d-block  " src="{% static 'kiloapp/images/pro2.png'%}" alt="">
+                            </div>
+                            <h5 class="mt-4 mb-0"><strong class="text-warning1 text-uppercase">Dum cooked fresh on every order</strong></h5>
+                            <p class="m-0 pt-3" style="color: rgb(0, 0, 0);">Each biryani is individually prepared in the traditional dum style with distinct layers by our khansamas in natural clay handis</p>
+                        </div>
+                        <div class="carousel-item text-center">
+                            <div class="img-box p-1  m-auto">
+                                <img class="d-block " src="{% static 'kiloapp/images/pro3.png'%}" alt="">
+                            </div>
+                            <h5 class="mt-4 mb-0"><strong class="text-warning1 text-uppercase">Authentic recipes with traditional khansama style of cooking</strong></h5>
+                            <p class="m-0 pt-3" style="color: rgb(0, 0, 0);">BBK brings the Royal Biryani to you, prepared in the traditional dum style, slow cooked to perfection by our khansama</p>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#reviews" role="button" data-slide="prev">
+                        <i class="fa fa-angle-left" aria-hidden="true"></i>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#reviews" role="button" data-slide="next">
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="all-page-title page-breadcrumb4">
+    <div class="container text-center">
+        <div class="row">
+            <h1>Spacial Menu</h1>
+        </div>
+    </div>
+</div>
+
 <div>
-    <div class="about-section-box" style="background-color: white;">
-        <div class="container">
+    <div class="about-section-box bgofhead" style="background-color: white;">
+        <div class="container ">
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-8 text-center">
-                    <div class="inner-column">
+                <div class="col-lg-6 col-md-6 col-sm-8 text-center" style="">
+                    <div class="inner-column ">
 
                         <h1 style="font-weight: 600;">FAST AND EASY <span data-aos="fade-right">to Order fresh biryani on your finger tips</span></h1>
                         <p>FLAT Rs. 200 OFF on 1st order on min. order amount of Rs 750 and above. Use Code FLAT200. (TnC Apply)</p>
@@ -35,9 +92,13 @@
                 <div class="col-lg-6 col-md-6 col-sm-8" data-aos="zoom-in-right">
                     <img src="{% static 'kiloapp/images/cover.jpeg'%}" alt="" class="img-fluid">
                 </div>
+
             </div>
         </div>
     </div>
+
+
+
     <!-- End About -->
     <div class="all-page-title1 page-breadcrumb2">
         <div class="container text-center">
@@ -71,20 +132,14 @@
                         <div class="tab-pane fade show active" id="v-pills-special" role="tabpanel" aria-labelledby="v-pills-special-tab">
                             <div class="row">
                                 {% for post in posts %} {% if post.spacial == True %}
-
-                                <div class="col-lg-4 col-md-6 d-flex align-self-stretch">
-                                    <div class="gallery-single fix " data-aos="flip-up">
+                                <div class="col-lg-4 col-md-6 special-grid ">
+                                    <div class="gallery-single fix" data-aos="flip-up">
                                         <div class="why-text">
                                             <h4>{{post.name}}</h4>
                                             <p>{{post.description}}</p>
+                                            <h5>Rs {{ post.price }}</h5>
                                         </div>
-                                        <img src="{{post.cover.url}}" class="img-fluid" s style="height: 15em;width:100%;" alt="Image">
-                                        <h4 class="something1 " style="height: 3em;">{{ post.name}}</h4>
-                                        <h5 class="something2">Rs {{ post.price }}</h5>
-                                        {% comment %}
-                                        <a href="{% url 'update_cart' post.id %}?qty=12">
-                                            <h5 class="something3">Add To Cart</h5>
-                                        </a> {% endcomment %}
+                                        <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
                                         <a>
                                             <h5 class="something3">
                                                 <form method='GET' action='{% url "update_cart" post.id %}'>
@@ -93,11 +148,6 @@
                                                 </form>
                                             </h5>
                                         </a>
-
-                                        {% comment %}
-                                        <a href="{% url 'food-detail' post.id %}">
-                                            <h5 class="something3">Add To Cart</h5>
-                                        </a> {% endcomment %}
                                     </div>
                                 </div>
                                 {% endif %} {% endfor %}
@@ -109,15 +159,14 @@
                             <div class="row">
 
                                 {% for post in posts %} {% if post.food == 'Biriyani' %}
-                                <div class="col-lg-4 col-md-6 special-grid d-flex align-self-stretch">
+                                <div class="col-lg-4 col-md-6 special-grid ">
                                     <div class="gallery-single fix" data-aos="flip-up">
                                         <div class="why-text">
                                             <h4>{{post.name}}</h4>
                                             <p>{{post.description}}</p>
+                                            <h5>Rs {{ post.price }}</h5>
                                         </div>
                                         <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
-                                        <h4 class="something1" style="height: 3em;">{{ post.name}}</h4>
-                                        <h5 class="something2">Rs {{ post.price }}</h5>
                                         <a>
                                             <h5 class="something3">
                                                 <form method='GET' action='{% url "update_cart" post.id %}'>
@@ -136,15 +185,14 @@
                             <div class="row">
 
                                 {% for post in posts %} {% if post.food == 'Curries' %}
-                                <div class="col-lg-4 col-md-6 special-grid">
+                                <div class="col-lg-4 col-md-6 special-grid ">
                                     <div class="gallery-single fix" data-aos="flip-up">
                                         <div class="why-text">
                                             <h4>{{post.name}}</h4>
                                             <p>{{post.description}}</p>
+                                            <h5>Rs {{ post.price }}</h5>
                                         </div>
                                         <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
-                                        <h4 class="something1">{{ post.name}}</h4>
-                                        <h5 class="something2">Rs {{ post.price }}</h5>
                                         <a>
                                             <h5 class="something3">
                                                 <form method='GET' action='{% url "update_cart" post.id %}'>
@@ -163,15 +211,14 @@
                             <div class="row">
 
                                 {% for post in posts %} {% if post.food == 'Garlic Rice' %}
-                                <div class="col-lg-4 col-md-6 special-grid">
+                                <div class="col-lg-4 col-md-6 special-grid ">
                                     <div class="gallery-single fix" data-aos="flip-up">
                                         <div class="why-text">
                                             <h4>{{post.name}}</h4>
                                             <p>{{post.description}}</p>
+                                            <h5>Rs {{ post.price }}</h5>
                                         </div>
                                         <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
-                                        <h4 class="something1">{{ post.name}}</h4>
-                                        <h5 class="something2">Rs {{ post.price }}</h5>
                                         <a>
                                             <h5 class="something3">
                                                 <form method='GET' action='{% url "update_cart" post.id %}'>
@@ -196,10 +243,9 @@
                                         <div class="why-text">
                                             <h4>{{post.name}}</h4>
                                             <p>{{post.description}}</p>
+                                            <h5>Rs {{ post.price }}</h5>
                                         </div>
                                         <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
-                                        <h4 class="something1">{{ post.name}}</h4>
-                                        <h5 class="something2">Rs {{ post.price }}</h5>
                                         <a>
                                             <h5 class="something3">
                                                 <form method='GET' action='{% url "update_cart" post.id %}'>
@@ -225,10 +271,9 @@
                                         <div class="why-text">
                                             <h4>{{post.name}}</h4>
                                             <p>{{post.description}}</p>
+                                            <h5>Rs {{ post.price }}</h5>
                                         </div>
                                         <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
-                                        <h4 class="something1">{{ post.name}}</h4>
-                                        <h5 class="something2">Rs {{ post.price }}</h5>
                                         <a>
                                             <h5 class="something3">
                                                 <form method='GET' action='{% url "update_cart" post.id %}'>
@@ -257,27 +302,15 @@
 
 
 
-    <!-- Start Customer Reviews -->
-    <div class="customer-reviews-box" style="background-color: #D7A245;">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="heading-title text-center">
-                        <h2>OUR PROMISE</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
 
-            </div>
-        </div>
-    </div>
+    <!-- Start Customer Reviews -->
+
     <div class="customer-reviews-box" style="background-color: #D7A245;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="heading-title text-center">
-                        <h2>OUR PROMISE</h2>
+                        <h2>REVIEWS</h2>
                     </div>
                 </div>
             </div>

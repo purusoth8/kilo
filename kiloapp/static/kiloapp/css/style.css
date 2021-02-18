@@ -12,6 +12,12 @@
 @import url(font-awesome.min.css);
 @import url(superslides.css);
 @import url(baguetteBox.min.css);
+.all-meal {
+    position: relative;
+    margin-top: 30px;
+    border: 1px solid #e1e1e1;
+}
+
 .payment-info {
     background: #F5D53E;
     padding: 10px;
@@ -120,6 +126,9 @@ label.radio input:checked+span {
     font-size: 20px;
     text-align: center;
     font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 3em;
 }
 
 .something2 {
@@ -132,10 +141,11 @@ label.radio input:checked+span {
 
 .something3 {
     color: white;
-    background: #000000;
+    background: #EB7A20;
     font-size: 20px;
     text-align: center;
     border: #01010100;
+    height: 2em;
 }
 
 ::placeholder {
@@ -188,6 +198,10 @@ input {
 
 .navtext:hover {
     color: #ffbc2a;
+}
+
+.something5::placeholder {
+    color: rgb(5, 5, 5);
 }
 
 
@@ -599,6 +613,10 @@ button:focus {
     font-weight: 600;
 }
 
+.bgofhead {
+    background: url("../images/loyalty-coins.png") 50% 0 no-repeat;
+}
+
 
 /*------------------------------------------------------------------
     Menu
@@ -641,6 +659,9 @@ button:focus {
 }
 
 .gallery-single {
+    border-style: solid;
+    border-color: #00000000;
+    border-radius: 20px;
     margin-bottom: 30px;
 }
 
@@ -657,7 +678,7 @@ button:focus {
     bottom: -100%;
     right: 0;
     height: 100%;
-    background: #000000c5;
+    background: #D7A245;
     padding: 12px 12px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
@@ -672,7 +693,6 @@ button:focus {
 .why-text p {
     color: rgb(255, 255, 255);
     font-size: 13px;
-    border-bottom: 1px dashed #010101;
     margin: 0px;
     padding-bottom: 15px;
     margin-top: 0px;
@@ -747,6 +767,11 @@ button:focus {
 
 .text-warning {
     color: white !important;
+    font-size: 24px;
+}
+
+.text-warning1 {
+    color: rgb(0, 0, 0) !important;
     font-size: 24px;
 }
 
@@ -1056,6 +1081,15 @@ button:focus {
     }
 }
 
+.page-breadcrumb4 {
+    padding: 10em 0 10em;
+    background: url(../images/slide1.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 0;
+    position: relative;
+}
+
 .page-breadcrumb {
     padding: 2em 0 2em;
     background: url(../images/slide1.jpg) no-repeat;
@@ -1067,7 +1101,7 @@ button:focus {
 
 .page-breadcrumb2 {
     background-color: #010101;
-    padding: 2em 0 2em;
+    padding: 3em 0 3em;
     background-attachment: fixed;
     background-size: cover;
     background-position: 0 0;
@@ -1103,6 +1137,11 @@ button:focus {
 }
 
 .all-page-title1 h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
     padding: 2em 0 2em;
     background: #05050554;
     content: "";

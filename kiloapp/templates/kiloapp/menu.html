@@ -32,14 +32,19 @@
                                         <div class="card-body something4">
                                             <h5 class="card-title something4">{{post.name}}</h5>
                                             <p class="card-text something4">{{post.description}}.</p>
-                                            <h3 class="something4">Rs {{post.price}}.00<span class="pull-right"></h3>
-											<!-- <a href="" class="btn btn-outline-danger" name="submit" id="submit">Add To Cart</a> -->
-											<br>
-											<a ><h5 style="float:left">
-												<form method='GET' action='{% url "update_cart" post.id %}'>
-												<input class="something5" name='qty' style="width:35%;float:right;" min="1" type='number' placeholder="Qty : 1"/>&nbsp;
-												<input class="something5" type='submit' style="width:60%;float:left;" value='Add to Cart'/>
-												</form></h5></a></span>
+                                            <h3 class="something4">Rs {{post.price}}.00</h3>
+                                            <!-- <a href="" class="btn btn-outline-danger" name="submit" id="submit">Add To Cart</a> -->
+                                            <br>
+                                            <div style="position:absolute;bottom:10px;">
+                                                <a>
+                                                    <h5>
+                                                        <form method='GET' action='{% url "update_cart" post.id %}'>
+                                                            <input class="something5" type='submit' style="width:60%;" value='Add to Cart' />
+                                                            <input class="something5" name='qty' style="width:35%;" min="1" type='number' placeholder="Qty : 1" />
+                                                        </form>
+                                                    </h5>
+                                                </a>
+                                            </div>
 
                                         </div>
                                     </div>
@@ -84,19 +89,23 @@
                                 {% for post in posts %} {% if post.food == text %}
                                 <div class="col mb-4 d-flex align-self-stretch" data-aos="flip-right">
                                     <div class="card">
-                                        <img class="card-img"  style="height: 20em;width:100%;" src="{{post.cover.url}}" alt="Suresh Dasari Card">
+                                        <img class="card-img" style="height: 20em;width:100%;" src="{{post.cover.url}}" alt="Suresh Dasari Card">
                                         <div class="card-body something4">
                                             <h5 class="card-title something4">{{post.name}}</h5>
                                             <p class="card-text something4">{{post.description}}.</p>
-                                            <h3 class="something4">Rs {{post.price}}.00<span class="pull-right"></h3>
-											<!-- <a href="" class="btn btn-outline-danger" name="submit" id="submit">Add To Cart</a> -->
-											<br>
-											<a ><h5 style="float:left">
-												<form method='GET' action='{% url "update_cart" post.id %}'>
-												<input class="something5" name='qty' style="width:35%;float:right;" min="1" type='number' placeholder="Qty : 1"/>&nbsp;
-												<input class="something5" type='submit' style="width:60%;float:left;" value='Add to Cart'/>
-												</form></h5></a></span>
-
+                                            <h3 class="something4">Rs {{post.price}}.00</h3>
+                                            <!-- <a href="" class="btn btn-outline-danger" name="submit" id="submit">Add To Cart</a> -->
+                                            <br>
+                                            <div style="position:absolute;bottom:10px;">
+                                                <a>
+                                                    <h5>
+                                                        <form method='GET' action='{% url "update_cart" post.id %}'>
+                                                            <input class="something5" type='submit' style="width:60%;" value='Add to Cart' />
+                                                            <input class="something5" name='qty' style="width:35%;" min="1" type='number' placeholder="Qty : 1" />
+                                                        </form>
+                                                    </h5>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
