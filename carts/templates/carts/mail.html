@@ -1,8 +1,8 @@
-{% extends "kiloapp/base.html" %}
-
-{% block content %}
+{% extends "kiloapp/base.html" %} {% block content %} {% load static%}
+<audio controls autoplay>
+    <source src="{% static 'kiloapp/calm.mp3'%}" type="audio/mpeg">
+  </audio>
 <div style="height: 150px;"></div>
 
-<h1>sent</h1>
-
+<h1 style="text-align: center;">Orded has been confirmed</h1>
 {% endblock %}

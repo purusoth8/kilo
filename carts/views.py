@@ -24,8 +24,8 @@ def email_one(request):
         
         context = {"cart":cart}
     subject = "Order for "+str(cart.author)
-    to = ['dekoxih700@fironia.com',str(request.user.email),'mammamaathiyosi@gmail.com']
-    from_email = 'mammamaathiyosi@gmail.com'
+    to = [str(request.user.email),'kilobiriyanilk@gmail.com']
+    from_email = 'kilobiriyanilk@gmail.com'
     
 
     message = get_template('carts/inside_main.html').render(context)
