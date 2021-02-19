@@ -28,12 +28,28 @@ def email_one(request):
     from_email = 'kilobiriyanilk@gmail.com'
     
 
-    message = get_template('carts/inside_main.html').render(context)
+    message = get_template('carts/inside.html').render(context)
     msg = EmailMessage(subject, message, to=to, from_email=from_email)
     msg.content_subtype = 'html'
     msg.send()
 
     return render(request,'carts/mail.html')
+
+@login_required
+def mailth(request):
+    try:
+        the_id = request.session['cart_id']
+    except:
+        the_id=None
+    if the_id:
+        cart = Cart.objects.get(id=the_id)
+        context = {"cart":cart}
+    else:
+        empty_message="Your cart is empty please keep shopping"
+        context= {"empty":True,"empty_message":empty_message}
+        
+    return render(request,'carts/mail.html',context)
+
 
 
 # def mail(request):

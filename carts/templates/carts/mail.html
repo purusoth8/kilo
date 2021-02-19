@@ -2,7 +2,106 @@
 <audio controls autoplay>
     <source src="{% static 'kiloapp/calm.mp3'%}" type="audio/mpeg">
   </audio>
-<div style="height: 150px;"></div>
+<div style="height: 120px;"></div>
+<h1 style="text-align: center;">Thanks for ordering with Kilo Biriyani your orded has been confirmed. check your E-mail for the receipt</h1>
 
-<h1 style="text-align: center;">Orded has been confirmed</h1>
+<table align="center" style="width:100%!important;padding:0 2%">
+    <tbody>
+        <tr>
+            <td align="center" valign="top" style="border-collapse:collapse;padding-top:5px;font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px">
+                <p style="font-family:'Maven Pro',sans-serif;font-size:24px;font-weight:400">
+                    Order id : {{cart.id}} </p>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" valign="top" style="border-collapse:collapse;padding-top:5px;font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px">
+                <p style="font-family:'Maven Pro',sans-serif;font-size:18px;font-weight:400">
+                    Restaurant Address: </p>
+                <span style="color:#000000;font-size:18px">Gama Meda Rd, Ja-Ela 11350,Kilo Biriyani
+</span>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td align="center" valign="top" style="border-collapse:collapse;padding-top:5px;font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;padding-bottom:20px">
+                <span style="color:#000000">
+<span> {{request.user.first_name}} {{request.user.last_name}} </span>
+                </span>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td align="center" valign="top" style="border-collapse:collapse;padding-top:5px;font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:12px">
+                <span style="color:#000000;font-size:16px">Deliver To</span>
+            </td>
+        </tr>
+
+
+        <tr>
+            <td align="center" valign="top" style="border-collapse:collapse;padding-top:5px;font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px">
+                <span style="color:#000000">{{cart.address}}</span>
+            </td>
+        </tr>
+
+        <tr>
+            <td align="center" valign="top" style="border-collapse:collapse;padding-top:5px;font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;padding-bottom:17px">
+                <span style="color:#000000">Order Date: {{cart.timestamp}}
+</span>
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+<table align="center" style="width:85%;margin:0 auto;padding:30px;margin-bottom:15px">
+    <tbody>
+        <tr style="font-family:inherit;font-size:18px">
+            <td align="center" style="color:#D29B3B">Order SUMMARY
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table style="width:100%">
+
+                    <tbody>
+                        {% for item in cart.cartitem_set.all %}
+                        <tr>
+                            <td valign="top" style="border-collapse:collapse;padding-top:15px;font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;color:#000000">
+                                <span>
+                                  {{item.product}}&nbsp; X {{item.quantity}}
+                              </span>
+                                <span style="float:right">Rs {% widthratio item.quantity 1 item.product.price %}.00
+                              </span><br>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+                        <tr>
+                            <td style="padding-left:20px"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+        </tr>
+        <tr style="margin-top:40px">
+            <td>
+                <div style="margin-top:20px;padding:13px 20px 13px 20px;font-size:18px;border-radius:20px">
+                    <span style="display:inline-block;width:50%">
+                      Payment Mode Cash on delivery
+                  </span>
+                    <div style="float:right">
+                        <span style="float:right;font-size:18px">
+                          Rs {{cart.total}}.00
+</span>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
 {% endblock %}
