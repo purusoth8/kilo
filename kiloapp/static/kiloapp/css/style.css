@@ -661,7 +661,6 @@ button:focus {
 .gallery-single {
     border-style: solid;
     border-color: #00000000;
-    border-radius: 20px;
     margin-bottom: 30px;
 }
 
@@ -716,6 +715,8 @@ button:focus {
 
 .gallery-box {
     padding: 70px 0px;
+    background-color: black;
+    color: white;
 }
 
 .tz-gallery {
@@ -771,8 +772,8 @@ button:focus {
 }
 
 .text-warning1 {
-    color: rgb(0, 0, 0) !important;
-    font-size: 24px;
+    color: rgb(255, 255, 255) !important;
+    font-size: 14px;
 }
 
 @media (min-width: 320px) and (max-width: 640px) {
@@ -834,7 +835,6 @@ button:focus {
 .contact-imfo-box {
     background: #EB7A20;
     padding: 30px 0;
-    border-radius: 100px;
 }
 
 .overflow-hidden {
@@ -1050,7 +1050,7 @@ button:focus {
 -------------------------------------------------------------------*/
 
 .page-breadcrumb1 {
-    height: 100vh;
+    height: 50vh;
     background: url(../images/potbir.jpeg) no-repeat;
     background-attachment: fixed;
     background-size: cover;
