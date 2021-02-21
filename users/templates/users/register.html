@@ -1,26 +1,36 @@
-{% extends "kiloapp/base.html" %}
-
-{% block content %}
+{% extends "kiloapp/base.html" %} {% block content %} {% load static %}}
 <div style="height: 150px;"></div>
 
-    {% load crispy_forms_tags %}
-    <div class="m-sm-5 m-1 content-section">
-        <form method="POST">
-            {% csrf_token %}
-            <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Join Today</legend>
-                {{ form|crispy }}
-                {{ p_form|crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+{% load crispy_forms_tags %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 border ">
+            <div class="">
+                <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Join Today</legend>
+                        {{ form|crispy }} {{ p_form|crispy }}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                    </div>
+                </form>
+                <div class="border-top pt-3">
+                    <small class="text-muted">
+                            Already have an Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+                        </small>
+                </div>
             </div>
-        </form>
-        <div class="border-top pt-3">
-            <small class="text-muted">
-                Already have an Account? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
-            </small>
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+            <img src="{% static 'kiloapp/images/por.jpg'%}" style="width: 100%;" alt="">
         </div>
     </div>
+
+</div>
+<div style="height: 80px;"></div>
+
 
 {% endblock %}

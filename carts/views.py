@@ -26,14 +26,11 @@ def email_one(request):
     subject = "Order for "+str(cart.author)
     to = [str(request.user.email),'kilobiriyanilk@gmail.com']
     from_email = 'kilobiriyanilk@gmail.com'
-    
-
     message = get_template('carts/inside.html').render(context)
     msg = EmailMessage(subject, message, to=to, from_email=from_email)
     msg.content_subtype = 'html'
     msg.send()
-
-    return render(request,'carts/mail.html')
+    return render(request,'carts/mail.html',context)
 
 @login_required
 def mailth(request):
