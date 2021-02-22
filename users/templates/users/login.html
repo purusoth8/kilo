@@ -17,7 +17,15 @@
                         <button class="btn btn-outline-danger" type="submit">Login</button>
                     </div>
                 </form>
+
                 <div class="border-top pt-3">
+
+                    <small class="text-muted">
+                                Forgot password? <a class="ml-2" href="{% url 'password_reset' %}">Reset Password</a>
+                            </small>
+                </div>
+                <div class="">
+
                     <small class="text-muted">
                                 Don't have an Account? <a class="ml-2" href="{% url 'register' %}">Register</a>
                             </small>
@@ -30,6 +38,7 @@
     </div>
 
 </div>
+<div style="height: 50px;"></div>
 
 
 
