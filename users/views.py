@@ -2,7 +2,8 @@ from django.shortcuts import render,redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm,UserUpdateForm,ProfileUpdateForm
-
+from .models import Profile
+from django.contrib.auth import login, authenticate
 # Create your views here.
 def register(request):
     if request.method=='POST':
@@ -10,11 +11,33 @@ def register(request):
         if form.is_valid():
             form.save()
             username=form.cleaned_data.get('username')
+            password=form.cleaned_data.get('password1')
+            acccount = authenticate(username=username,password=password)
+            login(request,acccount)
             messages.success(request,f'Account created for {username}!')
-            return redirect('login')
+            return redirect('profile')
     else:
         form=UserRegisterForm()
     return render(request,'users/register.html',{'form':form})
+
+
+# def register(request):
+#     if request.method=='POST':
+#         form=UserRegisterForm(request.POST)
+#         p_form=ProfileUpdateForm(request.POST)
+        
+#         if form.is_valid() and p_form.is_valid():
+#             form.save()
+#             p_form.save()
+#             username=form.cleaned_data.get('username')
+#             messages.success(request,f'Account created for {username}!')
+#             return redirect('login')
+#     else:
+#         form=UserRegisterForm()
+#         p_form=ProfileUpdateForm()
+#     return render(request,'users/register.html',{'form':form,'p_form':p_form})
+
+
 
 @login_required
 def profile(request):
@@ -25,7 +48,7 @@ def profile(request):
             u_form.save()
             p_form.save()
             messages.success(request,f'Account update')
-            return redirect('profile')
+            return redirect('index')
 
     
     else:
