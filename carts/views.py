@@ -143,7 +143,7 @@ def update_cart(request,id):
     #print(cart.products.count())
     user = request.user
     cart.address=request.user.profile.address
-    cart.phone=request.user.profile.phone
+    cart.phone=request.user.profile.phone1
     
     cart.author = user
     cart.total=new_total
