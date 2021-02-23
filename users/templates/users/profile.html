@@ -1,27 +1,32 @@
-{% extends "kiloapp/base.html" %} {% block content %}
+{% extends "kiloapp/base.html" %} {% block content %} {% load static %}
 <div style="height: 150px;"></div>
 
 {% load crispy_forms_tags %}
-<div class="m-sm-5 m-1 content-section">
 
-    <!-- <h1>{{user.username}}</h1>
-    <h1>{{user.profile.address}}</h1>
-    <h1>{{user.profile.phone1}}</h1>
+<div class="container">
+    <div class="row">
 
-     -->
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 border">
+            <div class="">
+                <form method="POST">
+                    {% csrf_token %}
+                    <fieldset class="form-group">
+                        <legend class="border-bottom mb-4">Profile Info</legend>
+                        {{ u_form|crispy }} {{ p_form|crispy }}
+                    </fieldset>
+                    <div class="form-group">
+                        <button class="btn btn-outline-danger" type="submit">Update</button>
+                    </div>
+                </form>
 
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <fieldset class="form-group">
-            <legend class="border-bottom mb-4">Profile Info</legend>
-            {{ u_form|crispy }} {{ p_form|crispy }}
-
-        </fieldset>
-        <div class="form-group">
-            <button class="btn btn-outline-info" type="submit">Update</button>
+            </div>
         </div>
-    </form>
-</div>
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+            <img src="{% static 'kiloapp/images/por1.jpg'%}" style="width: 100%;" alt="">
+        </div>
+    </div>
 
+</div>
+<div style="height: 50px;"></div>
 
 {% endblock %}

@@ -85,7 +85,8 @@
 
 
                 <div style="position: -webkit-sticky;top: 150px;position: sticky;" class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a style="color: aliceblue;" class="nav-link active" id="v-pills-special-tab" data-toggle="pill" href="#v-pills-special" role="tab" aria-controls="v-pills-special" aria-selected="true">Special</a>
+                    <a style="color: aliceblue;" class="nav-link active" id="v-pills-special-tab" data-toggle="pill" href="#v-pills-special" role="tab" aria-controls="v-pills-special" aria-selected="true">Offers</a>
+                    <a style="color: aliceblue;" class="nav-link" id="v-pills-special1-tab" data-toggle="pill" href="#v-pills-special1" role="tab" aria-controls="v-pills-special1" aria-selected="false">Special</a>
                     <a style="color: aliceblue;" class="nav-link" id="v-pills-biriyani-tab" data-toggle="pill" href="#v-pills-biriyani" role="tab" aria-controls="v-pills-biriyani" aria-selected="false">Biriyani</a>
                     <a style="color: aliceblue;" class="nav-link" id="v-pills-curries-tab" data-toggle="pill" href="#v-pills-curries" role="tab" aria-controls="v-pills-curries" aria-selected="false">Curries</</a>
                     <a style="color: aliceblue;" class="nav-link" id="garlicrice-tab" data-toggle="pill" href="#garlicrice" role="tab" aria-controls="garlicrice" aria-selected="false">Garlic Rice</a>
@@ -99,24 +100,25 @@
                     <div class="tab-pane fade show active" id="v-pills-special" role="tabpanel" aria-labelledby="v-pills-special-tab">
                         <div class="row">
 
-                            {% for post in posts %} {% if post.spacial == True %}
+                            {% for post in posts %} {% if post.offer > 0 %}
                             <div class="col-lg-4 col-md-6 special-grid ">
                                 <div class="gallery-single fix" data-aos="flip-up">
                                     <div class="why-text">
                                         <h4>{{post.name}}</h4>
                                         <p>{{post.description}}</p>
                                         {% if post.offer == 0 %}
-
                                         <h5>Rs {{ post.price }}</h5>
                                         {% else %}
-
-                                        <h5> {{post.price|sub:post.offer|div:post.price|mul:100|floatformat:"0"}}% off</h5>
                                         <h5><s>Rs {{ post.price }}</s></h5>
                                         <h5>Rs {{ post.offer }}</h5>
                                         {% endif %}
 
                                     </div>
-                                    <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
+                                    <div style="background-color: aliceblue;">
+                                        <p style="color:black;font-size: 2em; font-weight: 700;height: 1em;text-align: center;">{{post.price|sub:post.offer|div:post.price|mul:100|floatformat:"0"}}% OFF</p>
+                                        <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
+
+                                    </div>
 
                                     <a>
                                         <h5 class="something3">
@@ -133,6 +135,37 @@
                         </div>
 
                     </div>
+                    <div class="tab-pane fade" id="v-pills-special1" role="tabpanel" aria-labelledby="v-pills-special1-tab">
+                        <div class="row">
+
+                            {% for post in posts %} {% if post.spacial == True %}
+                            <div class="col-lg-4 col-md-6 special-grid ">
+                                <div class="gallery-single fix" data-aos="flip-up">
+                                    <div class="why-text">
+                                        <h4>{{post.name}}</h4>
+                                        <p>{{post.description}}</p>
+                                        {% if post.offer == 0 %}
+                                        <h5>Rs {{ post.price }}</h5>
+                                        {% else %}
+                                        <h5>{{post.price|sub:post.offer|div:post.price|mul:100|floatformat:"0"}}% off&nbsp; <s>Rs {{ post.price }}</s></h5>
+                                        <h5>Rs {{ post.offer }} </h5>
+                                        {% endif %}
+                                    </div>
+                                    <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
+                                    <a>
+                                        <h5 class="something3">
+                                            <form method='GET' action='{% url "update_cart" post.id %}'>
+                                                <input name='qty' class="something3" style="width:25%;float:right;" min="1" type='number' placeholder="Qty" />
+                                                <input type='submit' class="something3" style="width:75%;float:left;" value='Add to Cart' />
+                                            </form>
+                                        </h5>
+                                    </a>
+                                </div>
+                            </div>
+                            {% endif %} {% endfor %}
+                        </div>
+                    </div>
+
                     <div class="tab-pane fade" id="v-pills-biriyani" role="tabpanel" aria-labelledby="v-pills-biriyani-tab">
                         <div class="row">
 
@@ -142,7 +175,12 @@
                                     <div class="why-text">
                                         <h4>{{post.name}}</h4>
                                         <p>{{post.description}}</p>
+                                        {% if post.offer == 0 %}
                                         <h5>Rs {{ post.price }}</h5>
+                                        {% else %}
+                                        <h5>{{post.price|sub:post.offer|div:post.price|mul:100|floatformat:"0"}}% off&nbsp; <s>Rs {{ post.price }}</s></h5>
+                                        <h5>Rs {{ post.offer }} </h5>
+                                        {% endif %}
                                     </div>
                                     <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
                                     <a>
@@ -158,6 +196,7 @@
                             {% endif %} {% endfor %}
                         </div>
                     </div>
+
 
                     <div class="tab-pane fade" id="v-pills-curries" role="tabpanel" aria-labelledby="v-pills-curries-tab">
                         <div class="row">
@@ -168,7 +207,12 @@
                                     <div class="why-text">
                                         <h4>{{post.name}}</h4>
                                         <p>{{post.description}}</p>
+                                        {% if post.offer == 0 %}
                                         <h5>Rs {{ post.price }}</h5>
+                                        {% else %}
+                                        <h5>{{post.price|sub:post.offer|div:post.price|mul:100|floatformat:"0"}}% off&nbsp; <s>Rs {{ post.price }}</s></h5>
+                                        <h5>Rs {{ post.offer }} </h5>
+                                        {% endif %}
                                     </div>
                                     <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
                                     <a>
@@ -194,7 +238,12 @@
                                     <div class="why-text">
                                         <h4>{{post.name}}</h4>
                                         <p>{{post.description}}</p>
+                                        {% if post.offer == 0 %}
                                         <h5>Rs {{ post.price }}</h5>
+                                        {% else %}
+                                        <h5>{{post.price|sub:post.offer|div:post.price|mul:100|floatformat:"0"}}% off&nbsp; <s>Rs {{ post.price }}</s></h5>
+                                        <h5>Rs {{ post.offer }} </h5>
+                                        {% endif %}
                                     </div>
                                     <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
                                     <a>
@@ -221,7 +270,12 @@
                                     <div class="why-text">
                                         <h4>{{post.name}}</h4>
                                         <p>{{post.description}}</p>
+                                        {% if post.offer == 0 %}
                                         <h5>Rs {{ post.price }}</h5>
+                                        {% else %}
+                                        <h5>{{post.price|sub:post.offer|div:post.price|mul:100|floatformat:"0"}}% off&nbsp; <s>Rs {{ post.price }}</s></h5>
+                                        <h5>Rs {{ post.offer }} </h5>
+                                        {% endif %}
                                     </div>
                                     <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
                                     <a>
@@ -249,7 +303,12 @@
                                     <div class="why-text">
                                         <h4>{{post.name}}</h4>
                                         <p>{{post.description}}</p>
+                                        {% if post.offer == 0 %}
                                         <h5>Rs {{ post.price }}</h5>
+                                        {% else %}
+                                        <h5>{{post.price|sub:post.offer|div:post.price|mul:100|floatformat:"0"}}% OFF&nbsp; <s>Rs {{ post.price }}</s></h5>
+                                        <h5>Rs {{ post.offer }} </h5>
+                                        {% endif %}
                                     </div>
                                     <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
                                     <a>

@@ -127,9 +127,10 @@
                                                                                                 <td bgcolor="#ffffff" valign="top" style="border-collapse:collapse;padding-top:15px;font-family:Lato,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:18px;background:#f0f2f5;color:#898989">
                                                                                                     <span>
                                                                                                         {{item.product}}&nbsp; X {{item.quantity}}
-                                                                                                    </span>
+                                                                                                    </span> {% if item.product.offer == 0 %}
                                                                                                     <span style="float:right">Rs {% widthratio item.quantity 1 item.product.price %}.00
-                                                                                                    </span><br>
+                                                                                                    </span><br> {% else %}
+                                                                                                    <span style="float:right">Rs {% widthratio item.quantity 1 item.product.offer %}.00<br></span> {% endif %}
                                                                                                 </td>
                                                                                             </tr>
                                                                                             {% endfor %}
