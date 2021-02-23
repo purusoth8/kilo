@@ -136,8 +136,12 @@ def update_cart(request,id):
 
     new_total = 0
     for item in cart.cartitem_set.all():
-        line_total=(item.product.price) * item.quantity
-        new_total +=line_total
+        if int(item.product.offer)== 0:
+            line_total=(item.product.price) * item.quantity
+            new_total +=line_total
+        else:
+            line_total=(item.product.offer) * item.quantity
+            new_total +=line_total
 
     request.session['items_total']=cart.cartitem_set.count()
     #print(cart.products.count())

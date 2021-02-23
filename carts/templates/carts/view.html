@@ -28,7 +28,15 @@
                     <div class="d-flex flex-row">
                         <div class="ml-2"><span class="font-weight-bold d-block">{{item.product}}&nbsp;</span><span class="spec">{{item.product.description}}</span></div>
                     </div>
-                    <div class="d-flex flex-row align-items-center"><span class="d-block">{{item.quantity}}</span><span class="d-block ml-5 font-weight-bold">Rs {% widthratio item.quantity 1 item.product.price %}.00</span>
+                    <div class="d-flex flex-row align-items-center"><span class="d-block">{{item.quantity}}</span>
+                        {% if item.product.offer == 0 %}
+                        <span class="d-block ml-5 font-weight-bold">
+                        Rs {% widthratio item.quantity 1 item.product.price %}.00</span> 
+                        {% else %} 
+                        <span class="d-block ml-5 "><s>Rs {% widthratio item.quantity 1 item.product.price %}.00</s></span>
+                        &nbsp; <span class="font-weight-bold">Rs {% widthratio item.quantity 1 item.product.offer %}.00</span>
+                        {% endif %}
+
                         <a class="fa fa-trash-o ml-3 text-black-50" href="{% url 'update_cart' item.product.id%}?qty=0"></a>
                     </div>
                 </div>

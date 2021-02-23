@@ -1,4 +1,5 @@
-{% extends "kiloapp/base.html" %} {% block content %} {% load static%}
+{% extends "kiloapp/base.html" %} {% block content %} {% load static%} {% load mathfilters %}
+
 <!-- Start About -->
 <div style="height:50px;"></div>
 <div class="customer-reviews-box theback" style="background-color: rgb(0, 0, 0);height: 100px;">
@@ -97,13 +98,23 @@
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-special" role="tabpanel" aria-labelledby="v-pills-special-tab">
                         <div class="row">
+
                             {% for post in posts %} {% if post.spacial == True %}
                             <div class="col-lg-4 col-md-6 special-grid ">
                                 <div class="gallery-single fix" data-aos="flip-up">
                                     <div class="why-text">
                                         <h4>{{post.name}}</h4>
                                         <p>{{post.description}}</p>
+                                        {% if post.offer == 0 %}
+
                                         <h5>Rs {{ post.price }}</h5>
+                                        {% else %}
+
+                                        <h5> {{post.price|sub:post.offer|div:post.price|mul:100|floatformat:"0"}}% off</h5>
+                                        <h5><s>Rs {{ post.price }}</s></h5>
+                                        <h5>Rs {{ post.offer }}</h5>
+                                        {% endif %}
+
                                     </div>
                                     <img src="{{post.cover.url}}" class="img-fluid" style="height: 15em;width:100%;" alt="Image">
 
