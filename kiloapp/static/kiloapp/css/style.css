@@ -148,23 +148,6 @@ label.radio input:checked+span {
     height: 2em;
 }
 
-::placeholder {
-    /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: white;
-    opacity: 1;
-    /* Firefox */
-}
-
- :-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: white;
-}
-
- ::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: white;
-}
-
 .something4 {
     background: #ffbc2a;
     color: rgba(0, 0, 0, 0.774);
@@ -175,10 +158,6 @@ label.radio input:checked+span {
     background-color: #fddb6c;
     border-radius: 20px;
     border-color: #01010100;
-}
-
-input {
-    text-align: center;
 }
 
 .navoneplace {
@@ -1416,7 +1395,6 @@ button:focus {
 }
 
 .side-blog-img {
-    box-shadow: 15px 15px 0px 0px rgba(214, 81, 6, 0.4);
     -webkit-transition: all 1s ease 0.01s;
     transition: all 1s ease 0.01s;
     position: relative;

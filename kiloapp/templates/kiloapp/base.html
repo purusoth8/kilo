@@ -44,6 +44,7 @@
 </head>
 
 <body>
+
     <!-- Start header -->
     <style>
         #logo {
@@ -71,22 +72,47 @@
             }
         }
     </style>
+
+
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
     <header class="top-navbar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navoneplace" href="{% url 'index'%}">
                     <span class="navoneplace"><img src="{% static 'kiloapp/images/logo.jpeg'%}" id="logo" style="height:80px" alt="" /></span><span class="navoneplace navtext">KILO BIRIYANI</span>
                 </a>
+                <!-- <form action="{% url 'search_results' %}" method="get">
+                    <input style="background-color: #FC8621;border-color: #00000000;width: 4em;height:3.1em;right: 50px;" name="q" placeholder="Search.." type="text">
+                </form> -->
+
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation" href=#>
 				  <span class="navbar-toggler-icon"></span>
 				</button>
                 <div class="collapse navbar-collapse" id="navbars-rs-food">
                     <ul class="navbar-nav ml-auto">
+
                         <li class="nav-item active"><a class="nav-link" href="{% url 'index'%}">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'about'%}">About Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'menu'%}">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'catering'%}">Catering</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{% url 'contact'%}">Contact</a></li>
+
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">About</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                <a class="nav-link" href="{% url 'catering'%}">Catering</a>
+                                <a class="nav-link" href="{% url 'contact'%}">Contact</a>
+                                <a class="nav-link" href="{% url 'about'%}">About Us</a>
+                            </div>
+                        </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Shop</a>
                             <div class="dropdown-menu" aria-labelledby="dropdown-a">
@@ -99,6 +125,9 @@
                             </div>
                         </li>
 
+                        <li class="nav-item dropdown">
+                            <div id="google_translate_element"></div>
+                        </li>
 
                     </ul>
                 </div>

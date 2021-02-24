@@ -6,6 +6,7 @@ from django.http import HttpResponse
 from django.template import Context
 from django.template.loader import render_to_string, get_template
 from django.core.mail import EmailMessage
+from django.db.models import Q # new
 
 
 food_choice=[
@@ -72,7 +73,17 @@ class PostListView(ListView):
         model=Post
         template_name='kiloapp/index.html'
         context_object_name='posts'
-      
+
+class SearchResultsView(ListView):
+        model=Post
+        template_name='kiloapp/search_results.html'
+
+        def get_queryset(self): # new
+            query = self.request.GET.get('q')
+            object_list = Post.objects.filter(
+                Q(name__icontains=query) | Q(food__icontains=query)
+            )
+            return object_list
 
 class PostDetailView(DetailView):
         model=Post

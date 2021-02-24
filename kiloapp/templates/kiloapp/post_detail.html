@@ -1,18 +1,47 @@
-{% extends "kiloapp/base.html" %}
+{% extends "kiloapp/base.html" %} {% block content %}
+<div style="height: 150px;"></div>
 
-{% block content %}
+<!-- Start blog details -->
+<style>
+    .something6 {
+        float: left;
+        background-color: #b40c0c;
+        color: aliceblue;
+        border-color: #00000000;
+        width: 3em;
+    }
+    
+    .something7 {
+        color: rgb(0, 0, 0);
+        font-size: x-large;
+        font-weight: 600;
+    }
+</style>
 
-<div class="col-lg-4 col-md-6 special-grid " >
-<div class="gallery-single fix"data-aos="flip-up">
-<div class="why-text">
-        <h4>{{post.name}}</h4>
-        <p>{{post.description}}</p>
+
+<div class="container">
+    <div style="text-align: center;">
+        <h1 style="font-weight: 700;">{{post.name}}</h1>
+        <br>
     </div>
-    <img src="{{post.cover.url}}" class="img-fluid" alt="Image">
-    <h4 class="something1">{{ post.name}}</h4>
-    <h5 class="something2">Rs {{ post.price }}</h5>
-    <a href="{% url 'food-detail' post.id %}"><h5 class="something3">Add To Cart</h5></a>
+    <div class="row">
+
+        <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 ">
+            <img src="{{post.cover.url}}" class="img-fluid" alt="Image">
+        </div>
+        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+            <p>{{post.description}}</p>
+            <h5 class="something7">Rs {{ post.price }}</h5>
+            <form method='GET' action='{% url "update_cart" post.id %}'>
+                <input class="something6" type='submit' style="width:6em;" value='Add to Cart' />
+                <input class="something6" name='qty' style="width:5em;" min="1" type='number' placeholder="Qty : 1" />
+            </form>
+
+        </div>
+    </div>
+
 </div>
-</div>
+<div style="height: 50px;"></div>
+
 
 {% endblock %}

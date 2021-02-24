@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import PostListView,PostDetailView
+from .views import PostListView,PostDetailView,SearchResultsView
 from . import views
 
 urlpatterns = [
@@ -8,7 +8,7 @@ urlpatterns = [
     path('contact/',views.contact,name='contact'),
     path('about/',views.about,name='about'),
     path('catering/',views.res,name='catering'),
-    
+    path('search/', SearchResultsView.as_view(), name='search_results'),
     path('post/<int:pk>/', PostDetailView.as_view(),name='food-detail'),
 
     

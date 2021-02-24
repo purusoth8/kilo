@@ -28,14 +28,10 @@
                     <div class="d-flex flex-row">
                         <div class="ml-2"><span class="font-weight-bold d-block">{{item.product}}&nbsp;</span><span class="spec">{{item.product.description}}</span></div>
                     </div>
-                    <div class="d-flex flex-row align-items-center"><span class="d-block">{{item.quantity}}</span>
-                        {% if item.product.offer == 0 %}
+                    <div class="d-flex flex-row align-items-center"><span class="d-block">{{item.quantity}}</span> {% if item.product.offer == 0 %}
                         <span class="d-block ml-5 font-weight-bold">
-                        Rs {% widthratio item.quantity 1 item.product.price %}.00</span> 
-                        {% else %} 
-                        <span class="d-block ml-5 "><s>Rs {% widthratio item.quantity 1 item.product.price %}.00</s></span>
-                        &nbsp; <span class="font-weight-bold">Rs {% widthratio item.quantity 1 item.product.offer %}.00</span>
-                        {% endif %}
+                        Rs {% widthratio item.quantity 1 item.product.price %}.00</span> {% else %}
+                        <span class="d-block ml-5 "><s>Rs {% widthratio item.quantity 1 item.product.price %}.00</s></span> &nbsp; <span class="font-weight-bold">Rs {% widthratio item.quantity 1 item.product.offer %}.00</span> {% endif %}
 
                         <a class="fa fa-trash-o ml-3 text-black-50" href="{% url 'update_cart' item.product.id%}?qty=0"></a>
                     </div>
@@ -52,15 +48,15 @@
                     <h1>Delivery Details</h1>
                 </div>
                 <div>
-                    <h3 class="d-flex justify-content-between information">Name</h3>
+                    <h3 class="d-flex justify-content-between information"><u>Name</u></h3>
                     <div class="d-flex justify-content-between information">
                         <h4>{{cart.author}}</h4>
                     </div>
-                    <h3 class="d-flex justify-content-between information">Address</h3>
+                    <h3 class="d-flex justify-content-between information"><u>Address</u></h3>
                     <div class="d-flex justify-content-between information">
                         <h4>{{cart.address}}</h4>
                     </div>
-                    <h3 class="d-flex justify-content-between information">Contact Number</h3>
+                    <h3 class="d-flex justify-content-between information"><u>Contact Number</u></h3>
                     <div class="d-flex justify-content-between information">
                         <h4>{{cart.phone}}</h4>
                     </div>
